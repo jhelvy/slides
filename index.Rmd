@@ -1,6 +1,6 @@
 ---
 title: "Intro"
-date: November 12, 2021
+date: May 18, 2022
 author: "John Paul Helveston"
 institute: "Dept. of Engineering Management and Systems Engineering"
 output:
@@ -58,10 +58,10 @@ meta() %>%
     description = rmarkdown::metadata$subtitle,
     generator = "xaringan and remark.js"
   ) %>%
-  meta_name("github-repo" = "jhelvy/intro") %>%
+  meta_name("github-repo" = "jhelvy/research") %>%
   meta_social(
     title = rmarkdown::metadata$title,
-    url = "https://jhelvy.github.io/intro/",
+    url = "https://jhelvy.github.io/research/",
     og_type = "website",
     og_author = "John Paul Helveston",
     twitter_card_type = "summary_large_image",
@@ -106,96 +106,11 @@ Website: [www.jhelvy.com](http://www.jhelvy.com/)
 
 ---
 
-class: center, middle
-
-# Three random facts about me
-
---
-
-.cols3[
-### .center[I swing dance]
-<center>
-<img src="images/john_dance.jpg" width=100%>
-</center>
-]
-
---
-
-.cols3[
-### .center[I worked in China]
-<center>
-<img src="images/john_china.jpg" width=100%>
-</center>
-]
-
---
-
-.cols3[
-### .center[I swing dance in China]
-<center>
-<img src="images/john_china_dance.jpg" width=100%>
-</center>
-]
-
----
-
-class: center, middle
-
-# I use `r fontawesome::fa(name = "r-project", fill = "#276DC2")` for everything
-
-<br>
-
---
-
-### ...seriously...even [these slides](https://github.com/jhelvy/intro)
-
----
-
-class: center, middle
- 
-.cols3[
-### .center[[EMSE 4571:](https://p4a.seas.gwu.edu/)<br>Intro to Programming for Analytics<br>(Spring)]
-<center>
-<img src="https://p4a.seas.gwu.edu/images/p4a_hex_sticker.png" width=70%>
-</center>
-]
-
---
-
-.cols3[
-### .center[[EMSE 4572:](https://eda.seas.gwu.edu/)<br>Exploratory Data Analysis<br>(Fall)]
-
-<center>
-<img src="https://eda.seas.gwu.edu/images/eda_hex_sticker.png" width=70%>
-</center>
-]
-
---
-
-.cols3[
-### .center[[EMSE 6035:](https://madd.seas.gwu.edu/)<br>Marketing Analytics for Design Decisions<br>(Fall)]
-<center>
-<img src="https://madd.seas.gwu.edu/images/madd_hex_sticker.png" width=70%>
-</center>
-]
-
----
-
 class: center
 
 ## Technology Change Lab 
 
-<center>
-<img src="images/tcl.png" width=700>
-</center>
-
----
-
-class: center
-
-## Technology Change Lab 
-
-> I study how consumers, firms, markets, and policies affect technology change to<br> facilitate transitions to sustainable and low-carbon technologies.
+> I study how consumers, firms, markets, and policies affect technology change to <br> facilitate transitions to sustainable and low-carbon technologies.
 
 .cols3[
 ### .center[Electric & Sustainable Vehicle Technologies]
@@ -230,7 +145,7 @@ class: center
 
 --
 
-### - How will emerging technology like autonomous and electric vehicles compete against existing technologies in the market?
+### - How will emerging technology like autonomous and electric vehicles compete against existing technologies?
 
 --
 
@@ -281,20 +196,6 @@ class: center, middle
 <img src="images/phone_signal.png" width=100%>
 </center>
 ]
-
----
-
-class: center 
-
-## Directly asking people what they want usually isn't helpful
-
---
-
-## (People want everything)
-
-<center>
-<img src="images/the_homer.png" width=700>
-</center>
 
 ---
 
@@ -364,7 +265,7 @@ class: middle, inverse, center
 ## [.orange[Low-carbon Fuels]](#fuel)
 ## [.yellow[Multi-modal Trips]](#modes)
 ## [.green[Autonomous Vehicles]](#av)
-## [Electric Vehicle Incentives](#incentive)
+## [.blue[Electric Vehicle Incentives]](#incentive)
 
 ---
 
@@ -417,6 +318,8 @@ class: middle
 class: middle, center, inverse
 
 # [.green[Return to choices]](#choose)
+
+# [.red[Skip to end]](#packages)
 
 ---
 
@@ -479,6 +382,8 @@ Example:
 class: middle, center, inverse
 
 # [.green[Return to choices]](#choose)
+
+# [.red[Skip to end]](#packages)
 
 ---
 
@@ -543,50 +448,7 @@ class: middle, center, inverse
 
 # [.green[Return to choices]](#choose)
 
----
-
-class: inverse
-
-## Designing more efficient & equitable EV incentives
-
-<br>
-
-John P. Helveston, Assistant Professor, EMSE
-
-Laura Roberson, Ph.D. Student, EMSE
-
----
-
-name: incentive
-class: middle, center
-
-# Which incentive option would you prefer?
-
-<center>
-<img src="images/conjoint_incentives.png" width=1100>
-</center>
-
----
-
-class: center 
-
-### Immediate rebate is $1,200 more valuable than current federal tax credit
-
-<center>
-<img src="images/wtp_incentives.png" width=850>
-</center>
-
----
-
-<center>
-<img src="images/tax_total.png" width=930>
-</center>
-
----
-
-class: middle, center, inverse
-
-# [.green[Return to choices]](#choose)
+# [.red[Skip to end]](#packages)
 
 ---
 
@@ -605,6 +467,7 @@ Leah Kaplan, Ph.D. Student, EMSE
 
 ---
 
+background-color: #fff
 class: middle, center
 
 ## Imagine you are going out for an evening leisure activity - <br> Which transportation option would you choose/
@@ -616,12 +479,37 @@ class: middle, center
 ---
 
 background-color: #fff
-class: center
-
-# AVs only preferred when attendant present
+class: center, middle
 
 <center>
-<img src="images/wtp_av.png" width=1000>
+<img src="images/wtp_av.png" width=100%>
+</center>
+
+---
+
+background-color: #fff
+class: center, middle
+
+<center>
+<img src="images/sim_badTransit.png" width=900>
+</center>
+
+---
+
+background-color: #fff
+class: center, middle
+
+<center>
+<img src="images/sim_proRail.png" width=900>
+</center>
+
+---
+
+background-color: #fff
+class: center, middle
+
+<center>
+<img src="images/sim_all.png" width=1000>
 </center>
 
 ---
@@ -630,12 +518,77 @@ class: middle, center, inverse
 
 # [.green[Return to choices]](#choose)
 
+# [.red[Skip to end]](#packages)
+
+---
+
+name: incentive
+class: inverse
+
+## Designing more efficient & equitable EV incentives
+
+<br>
+
+John P. Helveston, Assistant Professor, EMSE
+
+Laura Roberson, Ph.D. Student, EMSE
+
+---
+
+background-color: #fff
+class: middle, center
+
+# Which incentive option would you prefer?
+
+<center>
+<img src="images/conjoint_incentives.png" width=1100>
+</center>
+
+---
+
+background-color: #fff
+class: center
+
+### Immediate rebate is **$1,400** more valuable than tax credit
+
+<center>
+<img src="images/wtp_incentives.png" width=850>
+</center>
+
+---
+
+background-color: #fff
+class: center
+
+### Immediate rebate even more preferred for **low-income households**
+
+<center>
+<img src="images/wtp_incentives_income.png" width=850>
+</center>
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/tax_total.png" width=930>
+</center>
+
+---
+
+class: middle, center, inverse
+
+# [.green[Return to choices]](#choose)
+
+# [.red[Skip to end]](#packages)
+
 ---
 
 name: packages
 
 .leftcol[
-# .center[logitr]
+
+# .blue[.center[[`logitr`](https://jhelvy.github.io/logitr/)]]
 
 <center>
 <img src="images/hex_logitr.png" width=250>
@@ -644,18 +597,21 @@ name: packages
 Fast estimation of multinomial and mixed logit models in R with “Preference” space or “Willingness-to-pay” space utility parameterizations.
 
 [https://jhelvy.github.io/logitr/](https://jhelvy.github.io/logitr/)
+
 ]
 
 .rightcol[
-# .center[conjointTools]
+
+# .blue[.center[[`cbcTools`](https://jhelvy.github.io/cbcTools/)]]
 
 <center>
-<img src="images/conjointTools.png" width=400>
+<img src="images/hex_cbcTools.png" width=250>
 </center>
 
-Tools for designing choice based conjoint survey experiments.
+Tools for designing choice based conjoint (cbc) survey experiments and conduction power analyses.
 
-[https://jhelvy.github.io/conjointTools/](https://jhelvy.github.io/conjointTools/)
+[https://jhelvy.github.io/cbcTools/](https://jhelvy.github.io/cbcTools/)
+
 ]
 
 ---
@@ -758,7 +714,7 @@ class: inverse
 
 # .center[.font150[Thanks!]]
 
-### .center[Slides: https://github.com/jhelvy/intro]
+### .center[Slides: https://github.com/jhelvy/research]
 
 .footer-large[
 .right[
