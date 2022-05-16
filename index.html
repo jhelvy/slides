@@ -3,7 +3,7 @@
   <head>
     <title>Intro</title>
     <meta charset="utf-8" />
-    <meta name="author" content="John Paul Helveston" />
+    <meta name="author" content="John Paul Helveston, Ph.D." />
     <meta name="date" content="2022-05-18" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -41,6 +41,18 @@
 
 
 
+layout: true
+
+&lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
+
+&lt;div class="footer-small"&gt;
+&lt;span&gt;
+&lt;a href="#background"&gt;Background&lt;/a&gt; | &lt;a href="#choose"&gt;Conjoint Studies&lt;/a&gt; | &lt;a href="#packages"&gt;Software&lt;/a&gt; | &lt;a href="#cars"&gt;Listings Project&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+
+---
+
 class: middle, inverse
 
 .leftcol40[
@@ -50,12 +62,14 @@ class: middle, inverse
 ]
 
 .rightcol60[
-### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg> John Paul Helveston
+### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg> John Paul Helveston, Ph.D.
 ### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z"/></svg> Dept. of Engineering Management and Systems Engineering
 ### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/></svg> May 18, 2022
 ]
 
 ---
+
+name: background
 
 # Hello World!
 
@@ -497,7 +511,7 @@ class: middle, center, inverse
 name: incentive
 class: inverse
 
-## Designing more efficient &amp; equitable EV incentives
+## Not All Subsidies are Equal:&lt;br&gt;Measuring Preferences for EV Financial Incentives
 
 &lt;br&gt;
 
@@ -519,7 +533,30 @@ class: middle, center
 ---
 
 background-color: #fff
-class: center
+class: middle
+
+.leftcol[
+
+&lt;center&gt;
+&lt;img src="images/sample_incentives.png" width=430&gt;
+&lt;/center&gt;
+
+]
+
+.rightcol[
+
+## Sample
+
+- Used [formr.org](https://formr.org/) Survey Platform
+- Fielded September, 2021
+- Nationwide sample of Dynata panel
+
+]
+
+---
+
+background-color: #fff
+class: center, middle
 
 ### Immediate rebate is **$1,400** more valuable than tax credit
 
@@ -662,7 +699,7 @@ Kazi Asifa, Undergraduate Student, EMSE
 ### .center[EVs are disproportionately supplied to ZEV states]
 
 &lt;center&gt;
-&lt;img src="images/cars-zev-heatmap.png" width=700&gt;
+&lt;img src="images/cars-zev-heatmap.png" width=680&gt;
 &lt;/center&gt;
 
 ---
@@ -747,19 +784,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

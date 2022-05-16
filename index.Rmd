@@ -1,7 +1,7 @@
 ---
 title: "Intro"
 date: May 18, 2022
-author: "John Paul Helveston"
+author: "John Paul Helveston, Ph.D."
 institute: "Dept. of Engineering Management and Systems Engineering"
 output:
   xaringan::moon_reader:
@@ -69,6 +69,18 @@ meta() %>%
   )
 ```
 
+layout: true
+
+<!-- this adds the link footer to all slides, depends on my-footer class in css-->
+
+<div class="footer-small">
+<span>
+<a href="#background">Background</a> | <a href="#choose">Conjoint Studies</a> | <a href="#packages">Software</a> | <a href="#cars">Listings Project</a>
+</span>
+</div>
+
+---
+
 class: middle, inverse
 
 .leftcol40[
@@ -84,6 +96,8 @@ class: middle, inverse
 ]
 
 ---
+
+name: background
 
 # Hello World!
 
@@ -525,7 +539,7 @@ class: middle, center, inverse
 name: incentive
 class: inverse
 
-## Designing more efficient & equitable EV incentives
+## Not All Subsidies are Equal:<br>Measuring Preferences for EV Financial Incentives
 
 <br>
 
@@ -547,7 +561,30 @@ class: middle, center
 ---
 
 background-color: #fff
-class: center
+class: middle
+
+.leftcol[
+
+<center>
+<img src="images/sample_incentives.png" width=430>
+</center>
+
+]
+
+.rightcol[
+
+## Sample
+
+- Used [formr.org](https://formr.org/) Survey Platform
+- Fielded September, 2021
+- Nationwide sample of Dynata panel
+
+]
+
+---
+
+background-color: #fff
+class: center, middle
 
 ### Immediate rebate is **$1,400** more valuable than tax credit
 
@@ -690,7 +727,7 @@ Kazi Asifa, Undergraduate Student, EMSE
 ### .center[EVs are disproportionately supplied to ZEV states]
 
 <center>
-<img src="images/cars-zev-heatmap.png" width=700>
+<img src="images/cars-zev-heatmap.png" width=680>
 </center>
 
 ---

@@ -172,6 +172,22 @@ div.footer-small {
   width: 100%;
 }
 
+div.footer-small a {
+  color: var(--color-white);
+  text-align: center;
+  text-decoration: underline;
+}
+
+div.footer-small a:hover {
+  color: var(--color-green);
+  text-decoration: underline;
+}
+
+div.footer-small inverse {
+  color: var(--color-white);
+  text-align: center;
+}
+
 div.footer-small span {
   font-size: 10pt;
   color: var(--color-white);
