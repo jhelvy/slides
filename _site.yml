@@ -1,0 +1,15 @@
+name: "Slides"
+output_dir: '.'
+exclude:
+- DESCRIPTION
+- README
+new_session: true
+
+output:
+  html_document:
+    toc: no
+    lib_dir: site_libs
+    self_contained: no
+    theme: journal
+    highlight: textmate
+    number_sections: true
