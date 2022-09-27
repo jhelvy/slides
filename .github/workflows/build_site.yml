@@ -23,12 +23,12 @@ jobs:
           install.packages('htmltools')
         shell: Rscript {0}
 
-      - name: Render Site
+      - name: Render index.html
         run: |
           rmarkdown::render("index.Rmd")
         shell: Rscript {0}
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to main
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAT }}
