@@ -2,7 +2,7 @@ on:
   push:
     branches: [main, master]
 
-name: Render & Deploy Site
+name: Render & Deploy index.html
 
 jobs:
   build:
@@ -28,9 +28,7 @@ jobs:
           rmarkdown::render("index.Rmd")
         shell: Rscript {0}
 
-      - name: Deploy to main
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: . # The folder the action should deploy.
+      - name: Commit results
+        run: |
+          git commit index.html -m 'Re-build index.html' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
