@@ -1,0 +1,33 @@
+on:
+  push:
+    branches: [main, master]
+
+name: Render & Deploy Site
+
+jobs:
+  build:
+    runs-on: macOS-10.15
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@master
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - name: Install dependencies
+        run: |
+          install.packages('rmarkdown')
+        shell: Rscript {0}
+
+      - name: Render Site
+        run: |
+          rmarkdown::render("index.Rmd", "index.html")
+        shell: Rscript {0}
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: main # The branch the action should deploy to.
