@@ -19,6 +19,8 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages('rmarkdown')
+          install.packages('markdown')
+          install.packages('htmltools')
         shell: Rscript {0}
 
       - name: Render Site
