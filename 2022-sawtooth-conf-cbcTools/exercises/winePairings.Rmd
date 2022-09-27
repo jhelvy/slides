@@ -1,0 +1,105 @@
+---
+title: "Wine Pairing"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+```
+
+Some data based on a rating scale of 1-10 
+
+```{r}
+data <- tribble(
+    ~meat,   ~wine,   ~rating,
+    "steak", "red",    8,
+    "steak", "white",  5,
+    "fish", "red",     7,
+    "fish", "white",   9
+)
+```
+
+# Main effects
+
+### **Wine**: White --> Red
+
+```{r}
+wine_red <- data %>% 
+    filter(wine == "red") %>%
+    pull(rating)
+wine_white <- data %>% 
+    filter(wine == "white") %>%
+    pull(rating)
+
+mean(wine_red) - mean(wine_white)
+```
+
+Preference for RED wine
+
+### **Meat**: Fish --> Steak
+
+```{r}
+meat_steak <- data %>% 
+    filter(meat == "steak") %>%
+    pull(rating)
+meat_fish <- data %>% 
+    filter(meat == "fish") %>%
+    pull(rating)
+
+mean(meat_steak) - mean(meat_fish)
+```
+
+Preference for FISH
+
+# Interaction effects
+
+### **Wine**: White --> Red _and_ Fish --> Steak
+
+```{r}
+wine_red_fish <- data %>%
+    filter(wine == "red", meat == "fish") %>%
+    pull(rating)
+wine_red_steak <- data %>%
+    filter(wine == "red", meat == "steak") %>%
+    pull(rating)
+wine_white_fish <- data %>% 
+    filter(wine == "white", meat == "fish") %>%
+    pull(rating)
+wine_white_steak <- data %>% 
+    filter(wine == "white", meat == "steak") %>%
+    pull(rating)
+
+((wine_red_steak - wine_red_fish) - (wine_white_steak - wine_white_fish)) / 2
+```
+
+Preference for RED wine **when meat is STEAK**
+
+Preference for WHITE wine **when meat is FISH**
+
+# Visualize effects
+
+```{r, fig.width=5, fig.height=3}
+ggplot(data) + 
+    geom_line(aes(x = wine, y = rating, group = meat, color = meat)) + 
+    geom_point(
+        data = data %>% 
+            group_by(wine) %>% 
+            summarise(rating = mean(rating)), 
+        aes(x = wine, y = rating)) +
+    theme_bw()
+```

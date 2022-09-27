@@ -1,0 +1,59 @@
+---
+title: "Practice Questions"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(logitr)
+library(fastDummies)
+```
+
+# Practice Question 1
+
+Consider the following experiment design
+
+<div style="width:200px">
+a | b | c | Effect
+--|---|---|-------
++ | - | - | A
+- | + | - | B 
++ | - | + | AC 
+- | + | + | BC 
+</div>
+
+<center>
+<img src="images/practice_question_1.png" width=300>
+</center>
+
+a) Is the design balanced? Is is orthogonal?
+
+- Balanced:  YES/NO? 
+- Othogonal: YES/NO? 
+
+Check: 
+
+```{r}
+# Write code here
+```
+
+The design is NOT orthogonal because A is always equal to -B.
+
+b) Write out the equation to compute the main effect for a, b, and c. 
+
+c) Are any main effects confounded? If so, what are they confounded with?

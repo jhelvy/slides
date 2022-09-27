@@ -1,0 +1,105 @@
+---
+title: "Solution to Practice Questions"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(logitr)
+library(fastDummies)
+```
+
+# Practice Question 1
+
+Consider the following experiment design
+
+<div style="width:200px">
+a | b | c | Effect
+--|---|---|-------
++ | - | - | A
+- | + | - | B 
++ | - | + | AC 
+- | + | + | BC 
+</div>
+
+<center>
+<img src="images/practice_question_1.png" width=300>
+</center>
+
+a) Is the design balanced? Is is orthogonal?
+
+- Balanced: YES 
+- Othogonal: NO
+
+Check: 
+
+```{r}
+doe <- tribble(
+    ~a, ~b, ~c,
+     1,  0,  0,  
+     0,  1,  0, 
+     1,  0,  1, 
+     0,  1,  1
+)
+
+# Check balance
+doe %>% count(a)
+doe %>% count(b)
+doe %>% count(c)
+
+# Check orthogonal
+pairs <- doe %>% 
+    mutate(
+        ab = ifelse(a == b, 1, 0),
+        bc = ifelse(b == c, 1, 0),
+        ac = ifelse(a == c, 1, 0),
+    )
+
+pairs %>% count(ab)
+pairs %>% count(bc)
+pairs %>% count(ac)
+```
+
+The design is NOT orthogonal because A is always equal to -B.
+
+b) Write out the equation to compute the main effect for a, b, and c. 
+
+$$
+ME(a) = \frac{A + AC}{2} - \frac{B + BC}{2}
+$$
+
+$$
+ME(b) = \frac{B + BC}{2} - \frac{A + AC}{2}
+$$
+
+$$
+ME(c) = \frac{AC + BC}{2} - \frac{A + B}{2}
+$$
+
+c) Are any main effects confounded? If so, what are they confounded with?
+
+In this design, A and B are confounded (A = -B)
+
+To find other confounded effects, multiply the remaining effects by (a = -b): 
+
+- b(a = -b) --> ab = -I
+- c(a = -b) --> ac = -bc
+- ab(a = -b) --> b = -a
+- ac(a = -b) --> c = -abc 
+- bc(a = -b) --> abc = -c
+- abc(a = -b) --> bc = -ac

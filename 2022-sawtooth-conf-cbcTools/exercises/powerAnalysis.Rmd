@@ -1,0 +1,111 @@
+---
+title: "Power Analysis"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(conjointTools)
+```
+
+# Survey design
+
+Make a simple design of experiment for a conjoint survey on apples
+
+```{r}
+# Set levels
+levels <- list(
+  price       = c(15, 20, 25), # Price ($1,000)
+  fuelEconomy = c(20, 25, 30), # Fuel economy (mpg)
+  accelTime   = c(6, 7, 8),    # 0-60 mph acceleration time (s)
+  electric    = c(0, 1)        # Electric vehicle (1) or gas (0)
+)
+
+# Full factorial design
+doe <- makeDoe(levels)
+doe <- recodeDoe(doe, levels)
+evaluateDoe(doe)
+
+# D-optimal fractional factorial design
+doe <- makeDoe(levels, type = "D", nTrials = 25, search = T)
+doe <- recodeDoe(doe, levels)
+evaluateDoe(doe)
+
+# Now sample the doe to create a survey
+survey <- makeSurvey(
+    doe       = doe,  # Design of experiment
+    nResp     = 1000, # Total number of respondents (upper bound)
+    nAltsPerQ = 3,    # Number of alternatives per question
+    nQPerResp = 6     # Number of questions per respondent
+)
+head(survey)
+```
+
+## Simulate choices
+
+You can simulate choices for a given `survey` using the `simulateChoices()` function. By default, random choices are simulated:
+
+```{r}
+# Random choices
+data <- simulateChoices(
+    survey = survey,
+    obsID  = "obsID"
+)
+head(data)
+```
+
+## Conduct a power analysis
+
+```{r}
+models <- estimateModels(
+    nbreaks = 10,
+    data    = data,
+    pars    = c("price", "fuelEconomy", "accelTime", "electric"),
+    outcome = "choice",
+    obsID   = "obsID"
+)
+```
+
+You can view the results of any one model by indexing it with double brackets, like this:
+
+```{r}
+summary(models[[1]])
+```
+
+You can also extract a summary of all models using `getModelResults()`
+
+```{r}
+results <- getModelResults(models)
+head(results)
+```
+
+Here is a summary of the standard errors for each sample size:
+
+```{r}
+ggplot(results) +
+  geom_hline(yintercept = 0.05, color = "red", linetype = 2) +
+  geom_point(aes(x = sampleSize, y = se, color = coef)) +
+  expand_limits(y = 0) +
+  scale_y_continuous(limits = c(0, 0.125)) +
+  theme_bw() + 
+  labs(
+    x = "Sample size", 
+    y = "Standard error", 
+    color = "Coefficient"
+  )
+```

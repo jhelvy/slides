@@ -1,0 +1,176 @@
+---
+title: "Design of Experiment with Cars"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(conjointTools)
+```
+
+# Full factorial design
+
+Full factorial design of experiment for 3 effects: A, B, C
+
+A: Electric? (Yes+ or No-)
+B: Warranty? (Yes+ or No-)
+C: Ford? (Yes+ or No-)
+
+```{r}
+levels <- list(
+    electric = c(1, 0),
+    warranty = c(1, 0),
+    ford     = c(1, 0)
+)
+
+doe <- makeDoe(levels)
+doe <- recodeDoe(doe, levels)
+doe
+```
+
+## Balanced?
+
+All levels appear an equal number of times.
+
+```{r}
+doe %>% count(electric)
+doe %>% count(warranty)
+doe %>% count(ford)
+
+doe %>% 
+  count(electric, ford)
+```
+
+## Orthogonal? 
+
+All pairs of levels appear together an equal number of times.
+
+```{r}
+pairs <- doe %>% 
+    mutate(
+        electric_warranty = ifelse(electric == warranty, 1, 0),
+        warranty_ford = ifelse(warranty == ford, 1, 0),
+        electric_ford = ifelse(electric == ford, 1, 0)
+    )
+
+pairs %>% count(electric_warranty)
+pairs %>% count(warranty_ford)
+pairs %>% count(electric_ford)
+```
+
+
+
+# Fractional factorial design w/confounded main effects
+
+```{r}
+doe_frac1 <- doe[c(1,4,5,8), ]
+doe_frac1
+```
+
+Balanced?
+
+```{r}
+doe_frac1 %>% count(electric)
+doe_frac1 %>% count(warranty)
+doe_frac1 %>% count(ford)
+```
+
+Orthogonal? 
+
+```{r}
+pairs <- doe_frac1 %>% 
+    mutate(
+        electric_warranty = ifelse(electric == warranty, 1, 0),
+        warranty_ford = ifelse(warranty == ford, 1, 0),
+        electric_ford = ifelse(electric == ford, 1, 0)
+    )
+
+pairs %>% count(electric_warranty)
+pairs %>% count(warranty_ford)
+pairs %>% count(electric_ford)
+```
+
+"electric" and "warranty" are confounded!
+
+
+
+# Fractional factorial design w/confounded interaction effects
+
+```{r}
+doe_frac2 <- makeDoe(levels, type = "D", nTrials = 4)
+doe_frac2 <- recodeDoe(doe_frac2, levels)
+doe_frac2
+```
+
+Balanced?
+
+```{r}
+doe_frac2 %>% count(electric)
+doe_frac2 %>% count(warranty)
+doe_frac2 %>% count(ford)
+```
+
+Orthogonal? 
+
+```{r}
+pairs <- doe_frac2 %>% 
+    mutate(
+        electric_warranty = ifelse(electric == warranty, 1, 0),
+        warranty_ford = ifelse(warranty == ford, 1, 0),
+        electric_ford = ifelse(electric == ford, 1, 0)
+    )
+
+pairs %>% count(electric_warranty)
+pairs %>% count(warranty_ford)
+pairs %>% count(electric_ford)
+```
+
+No main effects are confounded!
+
+Examine confounding between main and interaction effects
+
+```{r}
+pairs <- pairs %>% 
+    mutate(
+        electric__electric_warranty = ifelse(electric == electric_warranty, 1, 0),
+        electric__warranty_ford = ifelse(electric == warranty_ford, 1, 0),
+        electric__electric_ford = ifelse(electric == electric_ford, 1, 0),
+        warranty__electric_warranty = ifelse(warranty == electric_warranty, 1, 0),
+        warranty__warranty_ford = ifelse(warranty == warranty_ford, 1, 0),
+        warranty__electric_ford = ifelse(warranty == electric_ford, 1, 0),
+        ford__electric_warranty = ifelse(ford == electric_warranty, 1, 0),
+        ford__warranty_ford = ifelse(ford == warranty_ford, 1, 0),
+        ford__electric_ford = ifelse(ford == electric_ford, 1, 0)
+    )
+
+pairs %>% count(electric__electric_warranty)
+pairs %>% count(electric__warranty_ford)
+pairs %>% count(electric__electric_ford)
+
+pairs %>% count(warranty__electric_warranty)
+pairs %>% count(warranty__warranty_ford)
+pairs %>% count(warranty__electric_ford)
+
+pairs %>% count(ford__electric_warranty)
+pairs %>% count(ford__warranty_ford)
+pairs %>% count(ford__electric_ford)
+```
+
+- "electric" is confounded with "warranty_ford" interaction
+- "warranty" is confounded with "electric_ford" interaction
+- "ford" is confounded with "electric_warranty" interaction

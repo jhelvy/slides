@@ -1,0 +1,100 @@
+---
+title: "Design Efficiency"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(conjointTools)
+```
+
+# Measuring D-efficiency of experiment designs
+
+Make a simple design of experiment for a conjoint survey on apples
+
+First, define the attributes and levels:
+
+```{r}
+levels <- list(
+  price       = c(15, 20, 25), # Price ($1,000)
+  fuelEconomy = c(20, 25, 30), # Fuel economy (mpg)
+  accelTime   = c(6, 7, 8),    # 0-60 mph acceleration time (s)
+  electric    = c(0, 1)        # Electric vehicle (1) or gas (0)
+)
+```
+
+Make a full-factorial doe using the `makeDoe()`:
+
+```{r}
+doe <- makeDoe(levels)
+head(doe)
+dim(doe)
+```
+
+Make a "D-optimal" fractional factorial design:
+
+```{r}
+doe <- makeDoe(levels, type = "D", nTrials = 30)
+head(doe)
+dim(doe)
+
+# Check efficiency of design
+evaluateDoe(doe)
+```
+
+If you're unsure of how many trials to use, you can set `search = TRUE` to search across all feasible designs up to `nTrials`:
+
+```{r}
+doe <- makeDoe(levels, type = "D", nTrials = 30, search = TRUE)
+head(doe)
+dim(doe)
+
+# Check efficiency of design
+evaluateDoe(doe)
+```
+
+Once you've made your design, you can easily re-code it using the actual labels in your `levels` object using `recodeDoe()`:
+
+```{r}
+doe <- recodeDoe(doe, levels)
+head(doe)
+```
+
+
+# Restricted designs 
+
+What if there is a combination of attributes that doesn't make sense? What happens if I drop those combinations from my design?
+
+```{r}
+# Make a D-optimal fractional factorial design
+doe <- makeDoe(levels, type = "D", nTrials = 30, search = TRUE)
+doe <- recodeDoe(doe, levels)
+evaluateDoe(doe)
+
+# Don't allow gasoline cars to have fast acceleration
+doe <- doe %>% 
+  filter(! ((accelTime == 6) & (electric == 0)))
+evaluateDoe(doe)
+
+# Re-make using a full-factorial design before filtering
+doe <- makeDoe(levels)
+doe <- recodeDoe(doe, levels)
+doe <- doe %>% 
+  filter(! ((accelTime == 6) & (electric == 0)))
+evaluateDoe(doe)
+```

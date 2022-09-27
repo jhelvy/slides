@@ -1,0 +1,565 @@
+---
+title: "DOE & Power Analysis"
+subtitle: "EMSE 6035: Marketing Analytics for Design Decisions"
+date: November 03, 2021
+week: 10
+class: "10-doe"
+author: "John Paul Helveston"
+institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(fontawesome)
+library(kableExtra)
+library(countdown)
+library(metathis)
+library(here)
+
+options(
+  htmltools.dir.version = FALSE,
+  knitr.table.format = "html",
+  knitr.kable.NA = '',
+  dplyr.width = Inf,
+  width = 250
+)
+
+knitr::opts_chunk$set(
+  cache = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.path = "figs/",
+  fig.width = 7.252,
+  fig.height = 4,
+  comment = "#>",
+  fig.retina = 3
+)
+
+# Setup xaringanExtra options
+xaringanExtra::use_xaringan_extra(c(
+  "tile_view", "panelset", "share_again", "clipboard"))
+xaringanExtra::style_share_again(share_buttons = "none")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+
+# Set up website metadata
+meta() %>%
+  meta_general(
+    description = rmarkdown::metadata$subtitle,
+    generator = "xaringan and remark.js"
+  ) %>%
+  meta_name("github-repo" = "emse-madd-gwu/2021-Fall") %>%
+  meta_social(
+    title = rmarkdown::metadata$title,
+    url = "https://madd.seas.gwu.edu/2021-Fall/",
+    og_type = "website",
+    og_author = "John Paul Helveston",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@johnhelveston"
+  )
+
+# Setup class-specific paths
+class <- rmarkdown::metadata$class
+root <- paste0("https://madd.seas.gwu.edu/2021-Fall/class/", class, "/")
+path_slides <- file.path("class", class, "index.html")
+path_pdf <- paste0(root, class, ".pdf")
+path_notes <- paste0(root, class, ".zip")
+```
+
+class: middle, inverse
+
+.leftcol30[
+<center>
+<img src="https://github.com/emse-madd-gwu/emse-madd-gwu.github.io/raw/master/images/madd_hex_sticker.png" width=250>
+</center>
+]
+
+.rightcol70[
+# Week `r rmarkdown::metadata$week`: .fancy[`r rmarkdown::metadata$title`]
+
+### `r fontawesome::fa(name = "university", fill = "white")` `r rmarkdown::metadata$subtitle`
+### `r fontawesome::fa(name = "user", fill = "white")` `r rmarkdown::metadata$author`
+### `r fontawesome::fa(name = "calendar-alt", fill = "white")` `r rmarkdown::metadata$date`
+]
+
+---
+
+class: inverse
+
+# Quiz 4
+
+```{r, echo=FALSE}
+countdown(
+    minutes = 10,
+    warn_when = 30,
+    update_every = 1,
+    bottom = 0,
+    left = 0,
+    font_size = '4em'
+)
+```
+
+.leftcol[
+### Make sure to download the zip file on the first page!
+]
+
+.rightcol[
+<center>
+<img src="images/quiz_doge.png" width="400">
+</center>
+]
+
+---
+
+```{r child="topics/0.Rmd"}
+```
+
+---
+
+```{r child="topics/1.Rmd"}
+```
+
+---
+
+class: center, middle 
+
+# Before we start, re-install {conjointTools}
+
+.code100[
+```{r, eval=FALSE}
+remotes::install_github("jhelvy/conjointTools")
+```
+]
+
+---
+
+class: inverse, middle, center
+
+# Main & Interaction Effects
+
+---
+
+# .center[Full design space for 3 effects: A, B, C]
+
+<center>
+<img src="images/doe_cube.png" width=600>
+</center>
+
+---
+
+# .center[Full design space for 3 effects: A, B, C]
+
+.leftcol[
+# Example: _Cars_
+
+## A: Electric? (Yes+ or No-)
+## B: Warranty? (Yes+ or No-)
+## C: Ford? (Yes+ or No-)
+]
+
+.rightcol[
+<center>
+<img src="images/doe_cube.png" width=100%>
+</center>
+]
+
+---
+
+class: center
+
+## Main Effects
+
+.leftcol40[
+$$
+ME(a) = 
+$$
+
+$$
+\left( \frac{A + AB + AC + ABC}{4}\right) - 
+$$
+
+$$
+\left( \frac{I + B + C + BC}{4}\right)
+$$
+]
+
+.rightcol60[
+<center>
+<img src="images/main_a.png" width=550>
+</center>
+]
+
+---
+
+class: center
+
+## Interaction Effects
+
+.leftcol[
+$$
+INT(ab) = 
+$$
+
+$$
+\frac{1}{2}\left[ \left( \frac{AB + ABC}{2}\right) - \left( \frac{B + BC}{2}\right) \right] - 
+$$
+
+$$
+\frac{1}{2}\left[ \left( \frac{A + AC}{2}\right) - \left( \frac{I + C}{2}\right) \right]
+$$
+]
+
+.rightcol[
+<center>
+<img src="images/int_ab.png" width=550>
+</center>
+]
+
+---
+
+# .center[Example: Wine Pairings]
+
+.leftcol40[
+
+meat | wine
+-----|------
+fish | white 
+fish | red
+steak | white 
+steak | red
+
+]
+
+--
+
+.rightcol60[
+
+## Main Effects
+
+1. **Fish** or **Steak**?
+2. **Red** or **White** wine?
+
+## Interaction Effects
+
+1. **Red** or **White** wine _with **Steak**_?
+2. **Red** or **White** wine _with **Fish**_?
+]
+
+---
+
+class: center, middle 
+
+# Open `winePairings.Rmd`
+
+---
+
+class: inverse, middle, center
+
+# Fractional vs Full Factorial Designs
+
+---
+
+## .center[Full Factorial Design]
+
+.leftcol[
+## Example: _Cars_
+
+## A: Electric? (Yes+ or No-)
+## B: Warranty? (Yes+ or No-)
+## C: Ford? (Yes+ or No-)
+]
+
+.rightcol[
+```{r}
+library(conjointTools)
+
+levels <- list(
+    electric = c(1, 0),
+    warranty = c(1, 0),
+    ford     = c(1, 0)
+)
+
+doe <- makeDoe(levels)
+recodeDoe(doe, levels)
+```
+]
+
+---
+
+## .center[Full Factorial Design]
+
+.leftcol[
+## Balanced?
+
+All levels appear an equal number of times.
+
+## Orthogonal? 
+
+All pairs of levels appear together an equal number of times.
+]
+
+.rightcol[
+```{r}
+library(conjointTools)
+
+levels <- list(
+    electric = c(1, 0),
+    warranty = c(1, 0),
+    ford     = c(1, 0)
+)
+
+doe <- makeDoe(levels)
+doe <- recodeDoe(doe, levels)
+doe
+```
+]
+
+---
+
+## .center[Fractional Factorial Design]
+
+.leftcol[
+## Balanced?
+
+All levels appear an equal number of times.
+
+## Orthogonal? 
+
+All pairs of levels appear together an equal number of times.
+]
+
+.rightcol[
+```{r}
+doe[c(1, 3, 5, 6),]
+```
+]
+
+---
+
+class: center, middle 
+
+# Comparing Full and Fractional Factorial Designs
+
+# Open `cars.Rmd`
+
+---
+
+class: inverse
+
+# Practice Question 1
+
+.leftcol[
+Consider the following experiment design
+
+a | b | c | Effect
+--|---|---|-------
++ | - | - | A
+- | + | - | B 
++ | - | + | AC 
+- | + | + | BC 
+
+]
+
+.rightcol[
+
+a) Is the design balanced? Is is orthogonal?
+
+b) Write out the equation to compute the main effect for a, b, and c. 
+
+c) Are any main effects confounded? If so, what are they confounded with?
+]
+
+---
+
+class: inverse, center
+
+# .fancy[Break]
+
+```{r, echo=FALSE}
+countdown(minutes = 5,
+          warn_when = 30,
+          update_every = 1,
+          left = 0, right = 0, top = 1, bottom = 0,
+          margin = "5%",
+          font_size = "8em")
+```
+
+---
+
+```{r child="topics/2.Rmd"}
+```
+
+---
+
+class: center
+
+## We want to find $\boldsymbol{\beta}$ by maximizing the log-likelihood
+
+<center>
+<img src="images/mle1.png" width=1000>
+<img src="images/mle2.png" width=500>
+</center>
+
+---
+
+class: center
+
+### Covariance of $\boldsymbol{\beta}$ inversely related to matrix of 2nd derivatives
+
+<center>
+<img src="images/covariance.png" width=400>
+</center>
+
+--
+
+### Negative of the hessian evaluated at the MLE<br>solution is the **"Observed Information Matrix"**
+
+## $$\boldsymbol{I}(\boldsymbol{\beta}) = - \nabla_{\boldsymbol{\beta}}^2 \ln (\mathcal{L})$$
+
+---
+
+class: center
+
+## "D-optimal" designs attempt to maximize the<br>"D-efficiency" of a design
+
+## $$D = \left( \frac{|\boldsymbol{I}(\boldsymbol{\beta})|}{n^p} \right)^{1/p}$$
+
+where $p$ is the number of coefficients in the model and $n$ is the total sample size
+
+--
+
+# D ranges from 0 to 1
+# Designs are _more_ orthogonal as D --> 1
+
+---
+
+class: center, middle 
+
+# Finding Efficient Designs
+
+# Open `efficiency.Rmd`
+
+---
+
+class: inverse
+
+```{r, echo=FALSE}
+countdown(
+  minutes = 20,
+  warn_when = 15,
+  update_every = 1,
+  top = 0,
+  right = 0,
+  font_size = '2em'
+)
+```
+
+## Your Turn
+
+.leftcol80[
+1. Individually, create a fractional factorial design of experiment for your team project. Are you able to identify a high D-efficient design with fewer trials than a full factorial design. Can you find a _balanced_ design that is also efficient?
+
+2. Compare your results with your teammates.
+
+3. As a team, consider whether there are any restrictions you should make on your design and examine the impact (if any) those restrictions have on your design efficiency.
+]
+
+---
+
+```{r child="topics/3.Rmd"}
+```
+
+---
+
+class: center, middle 
+
+# How many respondents do I need?
+
+---
+
+class: center, middle 
+
+# How many respondents do I need<br>_to get X level of precision on $\boldsymbol{\beta}$_?
+
+---
+
+# Standard errors are inversely related to $\sqrt{N}$
+
+.leftcol[
+```{r uncertainty, fig.show='hide'}
+n <- seq(100)
+se <- 1/sqrt(n)
+plot(n, se, type = "l")
+```
+
+Standard errors also decrease with:
+
+- Fewer attributes
+- Fewer levels in each categorical attribute
+- More questions per respondent
+]
+
+.rightcol[
+```{r, ref.label="uncertainty", echo=FALSE, fig.height=4.5, fig.width=6}
+```
+]
+
+---
+
+class: center, middle 
+
+## Using {conjointTools}, we can run simulations to determine the necessary sample size for a specific model
+
+# Open `powerAnalysis.Rmd`
+
+---
+
+class: inverse
+
+```{r, echo=FALSE}
+countdown(
+  minutes = 20,
+  warn_when = 15,
+  update_every = 1,
+  top = 0,
+  right = 0,
+  font_size = '2em'
+)
+```
+
+## Your Turn
+
+.leftcol80[
+Individually: 
+
+1. Using your design of experiment you just created in the last practice, conduct a power analysis to determine the necessary sample size to achieve a 0.05 significance level on your parameter estimates.
+
+2. Compare your results with your teammates.
+]
+
+---
+
+```{r child="topics/4.Rmd"}
+```
+
+---
+
+class: center, middle 
+
+# Open `powerAnalysis_interactions.Rmd`

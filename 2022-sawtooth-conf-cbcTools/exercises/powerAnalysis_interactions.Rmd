@@ -1,0 +1,84 @@
+---
+title: "Power Analysis"
+date: November 03, 2021
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+# Basic knit settings
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.retina = 3,
+  fig.path = "figs/"
+)
+
+library(tidyverse)
+library(conjointTools)
+```
+
+```{r}
+# Set levels
+levels <- list(
+  price = c(10, 15, 20, 25),
+  meat  = c("steak", "fish"),
+  wine  = c("red", "white")
+)
+
+# Full factorial design
+doe <- makeDoe(levels)
+doe <- recodeDoe(doe, levels)
+evaluateDoe(doe)
+
+# D-optimal fractional factorial design
+doe <- makeDoe(levels, type = "D", nTrials = 16, search = T)
+doe <- recodeDoe(doe, levels)
+evaluateDoe(doe)
+
+# Make the survey
+survey <- makeSurvey(
+    doe       = doe,  # Design of experiment
+    nResp     = 2000, # Total number of respondents (upper bound)
+    nAltsPerQ = 3,    # Number of alternatives per question
+    nQPerResp = 6     # Number of questions per respondent
+)
+head(survey)
+
+# Simulate random choices
+data <- simulateChoices(
+    survey = survey,
+    obsID  = "obsID"
+)
+head(data)
+
+# Estimate models
+models <- estimateModels(
+    nbreaks = 10,
+    data    = data,
+    pars    = c("price", "meat", "wine", "meat*wine"),
+    outcome = "choice",
+    obsID   = "obsID"
+)
+
+# Extract results
+results <- getModelResults(models)
+head(results)
+
+# Plot results
+ggplot(results) +
+  geom_hline(yintercept = 0.05, color = "red", linetype = 2) +
+  geom_point(aes(x = sampleSize, y = se, color = coef)) +
+  expand_limits(y = 0) +
+  theme_bw() + 
+  labs(
+    x = "Sample size", 
+    y = "Standard error", 
+    color = "Coefficient"
+  )
+```
