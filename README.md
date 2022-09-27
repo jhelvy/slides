@@ -1,4 +1,4 @@
 # Slides
 
-- [research](/research): A brief introduction to some of my research
+- [research](https://slides.jhelvy.com/research): A brief introduction to some of my research
  
