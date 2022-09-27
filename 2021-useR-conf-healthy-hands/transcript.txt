@@ -1,0 +1,185 @@
+1:
+
+Hi everyone, my name is John Paul Helveston and I want to talk
+
+about solutions to keep our hands happy and healthy
+
+2:
+
+Last year I typed 7.5 million key strokes, and if you're a
+
+regular R user like me, chances are you too are racking up
+
+some serious mileage on your keyboard, which can lead to pain
+
+and serious injury. So today I want to talk about some tools
+
+and suggestions to take better care of your hands while typing.
+
+3:
+
+My first suggestion is simply to practice your typing.
+
+I thought I had pretty good typing skills, but I found I was
+
+able to increase my speed and accuracy by about 20% with just
+
+two months of daily practice on on key-br-dot-com. So, take some
+
+time to work on your typing, most people can benefit from it.
+
+4:
+
+My next suggestion is to master your keyboard shortcuts.
+
+RStudio is packed with excellent shortcuts, like "alt" + "dash"
+
+to create an assignment operator, or command-shift-M to make a pipe.
+
+5:
+
+But there are many more that can make you a more efficient coder.
+
+For example, if you want to align a bunch of messy text, just select it
+
+and type control + I.
+
+6:
+
+One of my favorites is to generate multiple cursors by holding the
+
+"alt" key and selecting some lines. This is particularly helpful for
+
+editing elements in a vector.
+
+7:
+
+You can also create your own shortcuts by using a text expander,
+
+which are programs that convert keywords into text snippets.
+
+In the example on the left, I'm using some custom expansions to
+
+write some ggplot code for a scatterplot. And on the right, I'm
+
+using a single keyword to generate a code chunk that I use in most
+
+of my RMarkdown files. My favorite expander is an open source one
+
+called espanso, if you want to learn more at it, you can check out
+
+my blog post about it on my website at jhelvy.com.
+
+8:
+
+Another tip is to use custom keyboard layers. Every keyboard has
+
+at least two layers: the base layer of numbers and lower case letters,
+
+and another layer of symbols and upper case letters when you hold "shift".
+
+9:
+
+Unfortunately, many of the most useful keys for coding, like our navigation
+
+arrows, require us to move our hands away from the home row position.
+
+10:
+
+A nice solution is to use a custom layer to move these keys back
+
+to a more convenient location.
+
+11:
+
+For example, on my keyboard, I re-mapped my caps lock key to
+
+trigger a new layer that has the navigation arrows and forward and back
+
+delete under my right hand, and cut, copy, paste under my left hand.
+
+12:
+
+As you can see in this demo, this enables me quickly move the cursor around
+
+and manipulate code in RStudio without ever needing to leave the home row.
+
+13:
+
+I implemented this using a program called Karabiner Elements, which is
+
+for mac only, but on Windows most people use a similar program called
+
+Auto-hot-key.
+
+14:
+
+In addition to all these software tools, I highly recommend using
+
+some kind of a split keyboard.
+
+15:
+
+Split keyboards fix a lot of common ergonomic problems compared to a standard
+
+keyboard, like reducing ulnar deviation from twisting your wrists outward.
+
+16:
+
+And most split keyboards also add a small tenting angle 
+
+to reduce forearm pronation.
+
+17:
+
+Now one of the downsides to split keyboards is that they can be more
+
+expensive, though there are plenty of great options for around $100.
+
+But I encourage to consider your keyboard as a medical device, like a
+
+pair of glasses, which can easily cost over $100. Without glasses,
+
+I couldn't read my own code, but without a keyboard I couldn't type it.
+
+Investing in a good keyboard is an investment in the health of your hands,
+
+wrists, and shoulders.
+
+18:
+
+To really max out the benefits of a split keyboard, consider one that
+
+has dedicated thumb keys, like the Ergodox. Your thumbs are really
+
+strong, and they're useful for way more things than hitting a space bar.
+
+19:
+
+The Ergodox in particular is rather expensive, but if you're feeling ambitious
+
+you can build your own for a lot less. There's actually a pretty big community
+
+of keyboard hobbiest, and building your own keyboard these days is actually
+
+rather straightforward. Keyboards like the Iris shown here can be snapped
+
+together like a set of legos.
+
+20:
+
+Finally, if you are going to invest in a good keyboard, get one that is fully
+
+programmable. This enables you to implement many of the solutions I mentioned,
+
+like custom layers, directly into the keyboard itself.
+
+21:
+
+Okay, that's all I have. Thanks for listening and I look forward 
+
+to any comments or questions you might have. If you want to learn 
+
+more about anything I mentioned, here are some links, and feel free
+
+to reach out to me directly on Twitter or by email. 
