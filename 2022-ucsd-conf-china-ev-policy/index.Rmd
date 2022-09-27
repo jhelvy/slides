@@ -1,0 +1,144 @@
+---
+title: The Rise of Chinese Leadership in the<br>Plug-in Electric Vehicle Industry
+author: "John Paul Helveston"
+date: September 30, 2022
+institute: "The George Washington University"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+      - css/custom.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(fontawesome)
+library(metathis)
+
+options(
+    htmltools.dir.version = FALSE,
+    knitr.table.format = "html",
+    knitr.kable.NA = '',
+    dplyr.width = Inf,
+    width = 250
+)
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    fig.path = "figs/",
+    fig.width = 7.252,
+    fig.height = 4,
+    comment = "#>",
+    fig.retina = 3
+)
+
+# Setup xaringanExtra options
+xaringanExtra::use_xaringan_extra(c(
+  "tile_view", "panelset", "share_again"))
+xaringanExtra::style_share_again(share_buttons = "none")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+
+# Set up website metadata
+meta() %>%
+  meta_general(
+    description = rmarkdown::metadata$subtitle,
+    generator = "xaringan and remark.js"
+  ) %>%
+  meta_name("github-repo" = "jhelvy/slides/2022-09-30-ucsd-conf") %>%
+  meta_social(
+    title = rmarkdown::metadata$title,
+    url = "https://slides.jhelvy.com",
+    og_type = "website",
+    og_author = "John Paul Helveston",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@johnhelveston"
+  )
+```
+
+layout: true
+
+<!-- this adds the link footer to all slides, depends on my-footer class in css-->
+
+<div class="footer-small">
+<span>
+https://slides.github.com/jhelvy/2022-09-30-ucsd-conf
+</span>
+</div>
+
+---
+
+name: title-slide
+class: inverse, middle
+background-size: contain
+background-image: url(images/china.png)
+
+.leftcol20[
+
+<center>
+<br>
+<img src="images/plugcar.png" width=100%>
+</center>
+
+]
+
+.rightcol80[
+
+## `r rmarkdown::metadata$title`
+
+<br>
+
+### `r rmarkdown::metadata$author`
+
+### `r rmarkdown::metadata$institute`
+
+### `r rmarkdown::metadata$date`
+
+]
+
+---
+
+
+
+---
+
+name: final
+class: inverse
+background-size: contain
+background-image: url(images/china.png)
+
+<br>
+
+# .center[.font150[Thanks!]]
+
+## .center[Slides available at [https://slides.jhelvy.com/](https://slides.jhelvy.com/)]
+
+### .center[© 2022 John Paul Helveston]
+
+.footer-large[
+.right[
+
+@johnhelveston `r fa(name = "twitter", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+@jhelvy `r fa(name = "weixin", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+
+]]
+
+---
+
+class: center, middle, inverse 
+
+# Extra slides
