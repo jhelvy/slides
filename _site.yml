@@ -10,6 +10,6 @@ output:
     toc: no
     lib_dir: site_libs
     self_contained: no
-    theme: journal
+    theme: lumen
     highlight: textmate
     number_sections: true
