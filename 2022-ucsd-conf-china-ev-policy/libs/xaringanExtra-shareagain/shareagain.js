@@ -127,13 +127,11 @@
 
     // button touch events (block remarkjs slide change on touch)
     btnSlidePrev.addEventListener('touchend', function (ev) {
-      ev.preventDefault()
       slideshow.gotoPreviousSlide()
       ev.stopPropagation()
     })
 
     btnSlideNext.addEventListener('touchend', function (ev) {
-      ev.preventDefault()
       slideshow.gotoNextSlide()
       ev.stopPropagation()
     });

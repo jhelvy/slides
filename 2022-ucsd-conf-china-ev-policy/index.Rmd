@@ -67,18 +67,6 @@ meta() %>%
   )
 ```
 
-layout: true
-
-<!-- this adds the link footer to all slides, depends on my-footer class in css-->
-
-<div class="footer-small">
-<span>
-https://slides.github.com/jhelvy/2022-09-30-ucsd-conf
-</span>
-</div>
-
----
-
 name: title-slide
 class: inverse, middle
 background-size: contain
@@ -109,7 +97,105 @@ background-image: url(images/china.png)
 
 ---
 
+class: center, middle
+background-color: #FFF
 
+# Half of global PEV sales are in China
+
+<center>
+<img src="images/pev-sales-global.png" width=90%>
+</center>
+
+---
+
+class: inverse
+
+# China's PEV Ambition
+
+<br>
+
+## - Energy Security
+## - Pollution Reduction
+## - Technology Leadership
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - .green[Energy Security]
+### - Pollution Reduction
+### - Technology Leadership
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/oil-consumption.png" width=100%>
+</center>
+
+.right[Data source: U.S. EIA: https://www.eia.gov/petroleum/data.phpii]
+
+]
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - Energy Security
+### - .green[Pollution Reduction]
+### - Technology Leadership
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/carbon-emissions.png" width=100%>
+</center>
+
+.right[Data source: https://www.globalcarbonatlas.org]
+
+]
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - Energy Security
+### - Pollution Reduction
+### - .green[Technology Leadership]
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/leapfrog.png" width=100%>
+</center>
+
+]
 
 ---
 
