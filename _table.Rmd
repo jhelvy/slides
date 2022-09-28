@@ -16,7 +16,9 @@ readr::read_csv('slides.csv') %>%
     janitor::clean_names(case = 'title') %>% 
     rename(PDF = Pdf) %>% 
     kbl() %>% 
-    column_spec(column = 1, width = '6em') %>% 
+     kable_styling(bootstrap_options = c(
+         "striped", "hover", "condensed")) %>%  
+    column_spec(column = 1, width = '8em') %>% 
     column_spec(column = 2, width = '25em') %>% 
     column_spec(column = 3, width = '25em') %>% 
     column_spec(column = 4, width = '15em')
