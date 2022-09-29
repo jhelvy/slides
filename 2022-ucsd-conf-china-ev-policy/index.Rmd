@@ -624,14 +624,22 @@ read_csv(file.path("data", "ev-types.csv")) %>%
 
 ---
 
+class: inverse, middle, center
+
+# Institutions
+
+# Market Conditions 
+
+# Policies
+
+---
+
 name: final
 class: inverse
 background-size: contain
 background-image: url(images/china.png)
 
-<br>
-
-# .center[.font150[Thanks!]]
+<br><br><br>
 
 ## .center[Slides available at [https://slides.jhelvy.com/](https://slides.jhelvy.com/)]
 
