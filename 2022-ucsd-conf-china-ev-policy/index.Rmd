@@ -558,7 +558,7 @@ class: inverse, middle
 
 ---
 
-# An Emerging PEV Category: The Mini EV
+# An Emerging PEV Category: **The Mini EV**
 
 --
 
@@ -583,6 +583,23 @@ class: inverse, middle
 </center>
 
 ]
+
+---
+
+# An Emerging PEV Category: **The Mini EV**
+
+```{r, echo=FALSE}
+read_csv(file.path("data", "ev-types.csv")) %>%
+  kbl(
+    booktabs = TRUE,
+    longtable = FALSE,
+    caption = "Comparison of features for LSEVs, Mini EVs, and BEVs."
+  ) %>%
+  kable_styling(
+    latex_options = c("hold_position"),
+    font_size = 11
+  )
+```
 
 ---
 

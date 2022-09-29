@@ -1,0 +1,5 @@
+Feature,Low-speed EV,Mini EV,BEV
+Battery Chemistry,Lead-acid,Lithium-ion,Lithium-ion
+Driving Range (km),< 120,120 - 200,> 200
+Top Speed (kph),< 60,60 - 80,80 - 120
+"Price (1,000 RMB, after subsidies)",< 30,40 - 80,> 80
