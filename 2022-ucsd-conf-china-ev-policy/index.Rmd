@@ -377,12 +377,35 @@ class: inverse, middle, center
 
 ---
 
+class: center
+
+## Chinese buyers are more willing to adopt BEVs
+
+<center>
+<img src="images/pev-wtp.png" width=70%>
+</center>
+
+.right[citation]
+
+---
+
 class: center 
 
-## Chinese buyers are more willing to adopt BEVS
+## Chinese buyers are more willing to adopt BEVs
 
 <center>
 <img src="images/range.png" width=70%>
+</center>
+
+---
+
+background-color: #FFF
+class: center
+
+## Chinese automakers offer a greater variety of PEVs<br>at more affordable prices and driving ranges
+
+<center>
+<img src="images/price-range.png" width=95%>
 </center>
 
 ---
@@ -408,17 +431,6 @@ class: middle
 
 ---
 
-background-color: #FFF
-class: center 
-
-## Chinese automakers offer a greater variety of PEVs<br>at more affordable prices and driving ranges
-
-<center>
-<img src="images/price-range.png" width=95%>
-</center>
-
----
-
 class: inverse, middle, center
 
 .leftcol[
@@ -441,6 +453,44 @@ class: inverse, middle, center
 ## Bigger Sticks & Carrots
 
 ]
+
+---
+
+.leftcol[
+
+### Consumers
+
+- **Purchase Subsidies**:
+    - RMB 50,000 (USD $8,200) for PHEVs
+    - RMB 60,000 (USD $9,800) for BEVs
+- **PEV exemptions from restrictions**
+    - $15,000 plates in Shanghai are free
+    - Unlimited driving
+]
+
+--
+
+.rightcol[
+
+### OEMs
+
+- **Dual Credit System**: require annual credits for meeting fuel economy standards & selling PEVs.
+- e.g. Tesla earned $1.58 billion from credit sales in 2020<br>(.green[$721 million] profit would have been .red[-$859 million] loss).
+
+]
+
+---
+
+class: middle, center, inverse
+
+### Policies that make ICEVs more expensive than PEVs increase PEV adoption
+
+---
+
+class: inverse, middle, center
+
+# The Future of China's PEV Industry
+
 
 ---
 
