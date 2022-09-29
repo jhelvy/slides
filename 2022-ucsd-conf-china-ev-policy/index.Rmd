@@ -211,11 +211,25 @@ class: inverse, middle, center
 
 class: inverse, middle, center
 
+.leftcol[
+
 # .orange[Institutions]
 
-## The Joint Venture System
+# Market Conditions 
 
-## Local Protectionism 
+# Policies
+
+]
+
+.rightcol[
+
+<br>
+
+## 1) The Joint Venture System
+
+## 2) Local Protectionism 
+
+]
 
 ---
 
@@ -339,11 +353,27 @@ BEVs & PHEVs exempt from<br>license plate restrictions
 
 class: inverse, middle, center
 
+.leftcol[
+
 # Institutions
 
 # .orange[Market Conditions]
 
 # Policies
+
+]
+
+--
+
+.rightcol[
+
+<br>
+
+## 1) Lower bar for selling PEVs
+
+## 2) Better alternatives to cars
+
+]
 
 ---
 
@@ -391,11 +421,26 @@ class: center
 
 class: inverse, middle, center
 
+.leftcol[
+
 # Institutions
 
 # Market Conditions
 
 # .orange[Policies]
+
+]
+
+--
+
+.rightcol[
+
+<br>
+<br>
+
+## Bigger Sticks & Carrots
+
+]
 
 ---
 
