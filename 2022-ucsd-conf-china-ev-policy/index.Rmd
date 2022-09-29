@@ -381,11 +381,21 @@ class: center
 
 ## Chinese buyers are more willing to adopt BEVs
 
+.leftcol65[
+
 <center>
-<img src="images/pev-wtp.png" width=70%>
+<img src="images/pev-wtp.png" width=100%>
 </center>
 
-.right[citation]
+]
+
+.rightcol35[
+
+<br><br><br><br><br>
+
+.left[.font80[Helveston et al. (2015) "Will subsidies drive electric vehicle adoption? Measuring consumer preferences in the U.S. and China" _Transportation Research Part A: Policy and Practice_. 73, 96–112. DOI: [10.1016/j.tra.2015.01.002](https://www.sciencedirect.com/science/article/abs/pii/S0965856415000038)]]
+
+]
 
 ---
 
@@ -410,7 +420,9 @@ class: center
 
 ---
 
-class: middle
+# .center[Better alternatives to cars]
+ 
+<br>
  
 .leftcol[
 
@@ -458,7 +470,7 @@ class: inverse, middle, center
 
 .leftcol[
 
-### Consumers
+## .center[Consumers]
 
 - **Purchase Subsidies**:
     - RMB 50,000 (USD $8,200) for PHEVs
@@ -473,10 +485,10 @@ class: inverse, middle, center
 
 .rightcol[
 
-### OEMs
+## .center[OEMs]
 
 - **Dual Credit System**: require annual credits for meeting fuel economy standards & selling PEVs.
-- e.g. Tesla earned $1.58 billion from credit sales in 2020<br>(.green[$721 million] profit would have been .red[-$859 million] loss).
+- Tesla earned $1.58 billion from credit sales in 2020<br>(.green[$721 million] profit would have been .red[-$859 million] loss).
 
 ]
 
@@ -484,27 +496,26 @@ class: inverse, middle, center
 
 class: middle, center, inverse
 
-### Policies that make ICEVs more expensive than PEVs increase PEV adoption
+## Policies that make ICEVs more expensive<br>than PEVs increase PEV adoption
 
 ---
 
-class: inverse, middle, center
+class: inverse, middle
 
-# The Future of China's PEV Industry
+# .center[The Future of China's PEV Industry]
 
-.leftcol40[
+<br>
 
-### What if the JVs break up?
+## 1) What if the JVs break up?
 
-### Will local protectionism hinder growth?
+## 2) Will local protectionism hinder growth?
 
-### An Emerging PEV Category: The Mini EV
+## 3) An Emerging PEV Category: The Mini EV
 
-]
 
 ---
 
-# What if the JVs break up?
+# .center[What if the JVs break up?]
 
 --
 
@@ -530,7 +541,7 @@ class: inverse, middle, center
 
 ---
 
-# Will local protectionism hinder growth?
+# .center[Will local protectionism hinder growth?]
 
 --
 
