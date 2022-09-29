@@ -464,8 +464,9 @@ class: inverse, middle, center
     - RMB 50,000 (USD $8,200) for PHEVs
     - RMB 60,000 (USD $9,800) for BEVs
 - **PEV exemptions from restrictions**
-    - $15,000 plates in Shanghai are free
-    - Unlimited driving
+    - Shanghai license plates auction for ~$15,000 (free for PEVs)
+    - Unlimited driving during "Rush Hour" (7am – 8pm)
+
 ]
 
 --
@@ -491,6 +492,86 @@ class: inverse, middle, center
 
 # The Future of China's PEV Industry
 
+.leftcol40[
+
+### What if the JVs break up?
+
+### Will local protectionism hinder growth?
+
+### An Emerging PEV Category: The Mini EV
+
+]
+
+---
+
+# What if the JVs break up?
+
+--
+
+.leftcol[
+
+### They probably won't
+
+- Sunk costs
+- Knowledge / IP sharing not a real threat
+- Chinese partners can help meet dual credit requirements
+
+]
+
+--
+
+.rightcol[
+
+### Even if they did, not much change
+
+- Leading Chinese firms don't have JVs (e.g. BYD, Geely, XPeng, NIO)
+
+]
+
+---
+
+# Will local protectionism hinder growth?
+
+--
+
+<center>
+<img src="images/annual-sales.png" width=90%>
+</center>
+
+???
+
+- e-bike comparison: regional clusters supported by local governments were important in the early phases, but establishment of national standards was a critical step for greater industry maturation.
+- central government cracking down on most blunt protectionism strategies
+- With the entry of Tesla and other successful PEV startups, domestic PEV market is arguably already more competitive than other markets.
+
+
+---
+
+# An Emerging PEV Category: The Mini EV
+
+--
+
+.leftcol[
+
+### An example of a Low-speed EV (LSEV)
+
+<center>
+<img src="images/lsev.png" width=100%>
+</center>
+
+]
+
+--
+
+.rightcol[
+
+### The Wuling Hongguang Mini EV
+
+<center>
+<img src="images/mini-ev.png" width=100%>
+</center>
+
+]
 
 ---
 
