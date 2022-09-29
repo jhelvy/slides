@@ -335,3 +335,12 @@ jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
 class: center, middle, inverse 
 
 # Extra slides
+
+---
+
+background-color: #FFF
+class: middle, center
+
+<center>
+<img src="images/usBevMonthlySales.png" width=100%>
+</center>
