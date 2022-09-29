@@ -23,6 +23,8 @@ output:
 library(knitr)
 library(fontawesome)
 library(metathis)
+library(kableExtra)
+library(tidyverse)
 
 options(
     htmltools.dir.version = FALSE,
@@ -275,7 +277,7 @@ class: center
 
 .leftcol[
 
-### Foreign OEMs lack incentives to bring cutting-edge technologies
+### Multinational OEMs lack incentives to bring cutting-edge technologies
 
 ]
 
@@ -423,19 +425,23 @@ class: center
 # .center[Better alternatives to cars]
  
 <br>
- 
+
+--
+
 .leftcol[
 
-### World's largest charging network
+### .center[World's largest charging network]
 
 - End of 2020, China had 800,000 chargers installed.
 - 112,000 chargers installed in December 2020 alone.
 
 ]
 
+--
+
 .rightcol[
 
-### World's largest HSR network
+### .center[World's largest HSR network]
 
 - China's high-speed rail network recently surpassed the length of the equator at just over 40,000 km long
 
@@ -496,7 +502,7 @@ class: inverse, middle, center
 
 class: middle, center, inverse
 
-## Policies that make ICEVs more expensive<br>than PEVs increase PEV adoption
+# Policies that make ICEVs more expensive<br>than PEVs increase PEV adoption
 
 ---
 
@@ -521,7 +527,7 @@ class: inverse, middle
 
 .leftcol[
 
-### They probably won't
+### .center[They probably won't]
 
 - Sunk costs
 - Knowledge / IP sharing not a real threat
@@ -533,7 +539,7 @@ class: inverse, middle
 
 .rightcol[
 
-### Even if they did, not much change
+### .center[Even if they did,<br>not much would change]
 
 - Leading Chinese firms don't have JVs (e.g. BYD, Geely, XPeng, NIO)
 
@@ -541,13 +547,17 @@ class: inverse, middle
 
 ---
 
-# .center[Will local protectionism hinder growth?]
+## .center[Will local protectionism hinder growth?]
+
+<br>
 
 --
 
-<center>
-<img src="images/annual-sales.png" width=90%>
-</center>
+- Central government cracking down on protectionism strategies
+
+--
+
+- China's PEV market already more competitive than many others.
 
 ???
 
@@ -555,16 +565,26 @@ class: inverse, middle
 - central government cracking down on most blunt protectionism strategies
 - With the entry of Tesla and other successful PEV startups, domestic PEV market is arguably already more competitive than other markets.
 
+---
+
+class: middle
+
+<center>
+<img src="images/annual-sales.png" width=75%>
+</center>
 
 ---
 
-# An Emerging PEV Category: **The Mini EV**
+background-color: #FFF
+class: center 
+
+## An Emerging PEV Category: **The Mini EV**
 
 --
 
 .leftcol[
 
-### An example of a Low-speed EV (LSEV)
+#### Typical Low-speed EV (LSEV)
 
 <center>
 <img src="images/lsev.png" width=100%>
@@ -576,7 +596,7 @@ class: inverse, middle
 
 .rightcol[
 
-### The Wuling Hongguang Mini EV
+#### The Wuling Hongguang Mini EV
 
 <center>
 <img src="images/mini-ev.png" width=100%>
@@ -586,18 +606,19 @@ class: inverse, middle
 
 ---
 
-# An Emerging PEV Category: **The Mini EV**
+## .center[An Emerging PEV Category: **The Mini EV**]
+
+<br>
 
 ```{r, echo=FALSE}
 read_csv(file.path("data", "ev-types.csv")) %>%
   kbl(
     booktabs = TRUE,
-    longtable = FALSE,
-    caption = "Comparison of features for LSEVs, Mini EVs, and BEVs."
+    longtable = FALSE
   ) %>%
   kable_styling(
     latex_options = c("hold_position"),
-    font_size = 11
+    font_size = 30
   )
 ```
 
