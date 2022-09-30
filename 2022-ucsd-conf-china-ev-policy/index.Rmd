@@ -111,101 +111,6 @@ background-color: #FFF
 
 ---
 
-class: inverse
-
-# China's PEV Ambition
-
-<br>
-
-## - Energy Security
-## - Pollution Reduction
-## - Technology Leadership
-
----
-
-background-color: #FFF
-class: middle
-
-.leftcol35[
-
-# China's PEV Ambition
-
-<br>
-
-### - .green[Energy Security]
-### - Pollution Reduction
-### - Technology Leadership
-
-]
-
-.rightcol65[
-
-<center>
-<img src="images/oil-consumption.png" width=100%>
-</center>
-
-.right[Data source: U.S. EIA: https://www.eia.gov/petroleum/data.phpii]
-
-]
-
----
-
-background-color: #FFF
-class: middle
-
-.leftcol35[
-
-# China's PEV Ambition
-
-<br>
-
-### - Energy Security
-### - .green[Pollution Reduction]
-### - Technology Leadership
-
-]
-
-.rightcol65[
-
-<center>
-<img src="images/carbon-emissions.png" width=100%>
-</center>
-
-.right[Data source: https://www.globalcarbonatlas.org]
-
-]
-
----
-
-background-color: #FFF
-class: middle
-
-.leftcol35[
-
-# China's PEV Ambition
-
-<br>
-
-### - Energy Security
-### - Pollution Reduction
-### - .green[Technology Leadership]
-
-]
-
-.rightcol65[
-
-<center>
-<img src="images/leapfrog.png" width=100%>
-</center>
-
-]
-
----
-
-template: sales
-
----
-
 class: inverse, middle, center
 
 # Institutions
@@ -321,40 +226,17 @@ class: middle, center
 
 ## April 2018: JV requirement dropped for PEVs
 
+--
+
 <center>
 <img src="images/sales-2021.png" width=70%>
 </center>
 
 ---
 
-background-color: #EFEFEF
-class: center
+class: center, center, middle
 
 ## Local protectionism incubated early experimentation
-
-.leftcol[
-
-### **Beijing**
-
-Only BEVs exempt from<br>license plate restrictions
-
-<center>
-<img src="images/sales-bj.png" width=50%>
-</center>
-
-]
-
-.rightcol[
-
-### **Shanghai**
-
-BEVs & PHEVs exempt from<br>license plate restrictions
-
-<center>
-<img src="images/sales-sh.png" width=50%>
-</center>
-
-]
 
 ---
 
@@ -376,11 +258,13 @@ class: inverse, middle, center
 
 <br>
 
+.left[
+
 ## 1) Lower bar for selling PEVs
 
-## 2) Better alternatives to cars
+## 2) Infrastructure 
 
-]
+]]
 
 ---
 
@@ -406,28 +290,17 @@ class: center
 
 ---
 
-class: center 
+class: center, middle 
 
-## Chinese buyers are more willing to adopt BEVs
+### Chinese buyers are willing to accept relatively lower BEV driving ranges
 
 <center>
-<img src="images/range.png" width=70%>
+<img src="images/range.png" width=80%>
 </center>
 
 ---
 
-background-color: #FFF
-class: center
-
-## Chinese automakers offer a greater variety of PEVs<br>at more affordable prices and driving ranges
-
-<center>
-<img src="images/price-range.png" width=95%>
-</center>
-
----
-
-# .center[Better alternatives to cars]
+# .center[Infrastructure]
  
 <br>
 
@@ -629,16 +502,6 @@ read_csv(file.path("data", "ev-types.csv")) %>%
 
 ---
 
-class: inverse, middle, center
-
-# Institutions
-
-# Market Conditions 
-
-# Policies
-
----
-
 name: final
 class: inverse
 background-size: contain
@@ -669,9 +532,144 @@ class: center, middle, inverse
 
 ---
 
+background-color: #EFEFEF
+class: center
+
+## Local protectionism incubated early experimentation
+
+--
+
+.leftcol[
+
+### **Beijing**
+
+Only BEVs exempt from<br>license plate restrictions
+
+<center>
+<img src="images/sales-bj.png" width=50%>
+</center>
+
+]
+
+.rightcol[
+
+### **Shanghai**
+
+BEVs & PHEVs exempt from<br>license plate restrictions
+
+<center>
+<img src="images/sales-sh.png" width=50%>
+</center>
+
+]
+
+---
+
+background-color: #FFF
+class: center
+
+## Chinese automakers offer a greater variety of PEVs<br>at more affordable prices and driving ranges
+
+<center>
+<img src="images/price-range.png" width=95%>
+</center>
+
+---
+
 background-color: #FFF
 class: middle, center
 
 <center>
 <img src="images/usBevMonthlySales.png" width=100%>
 </center>
+
+---
+
+class: inverse
+
+# China's PEV Ambition
+
+<br>
+
+## - Energy Security
+## - Pollution Reduction
+## - Technology Leadership
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - .green[Energy Security]
+### - Pollution Reduction
+### - Technology Leadership
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/oil-consumption.png" width=100%>
+</center>
+
+.right[Data source: U.S. EIA: https://www.eia.gov/petroleum/data.phpii]
+
+]
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - Energy Security
+### - .green[Pollution Reduction]
+### - Technology Leadership
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/carbon-emissions.png" width=100%>
+</center>
+
+.right[Data source: https://www.globalcarbonatlas.org]
+
+]
+
+---
+
+background-color: #FFF
+class: middle
+
+.leftcol35[
+
+# China's PEV Ambition
+
+<br>
+
+### - Energy Security
+### - Pollution Reduction
+### - .green[Technology Leadership]
+
+]
+
+.rightcol65[
+
+<center>
+<img src="images/leapfrog.png" width=85%>
+</center>
+
+]
