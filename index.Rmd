@@ -17,5 +17,27 @@ knitr::opts_chunk$set(
 
 Slides for various talks I've given 
 
-```{r child = "_table.Rmd"}
+```{r, echo=FALSE}
+library(knitr)
+library(dplyr)
+library(kableExtra)
+
+readr::read_csv('slides.csv') %>%
+    mutate(
+        slides = paste0(
+            '[', stub,  '](https://slides.jhelvy.com/', stub, ')'),
+        pdf = paste0(
+            '[PDF](https://github.com/jhelvy/slides/raw/main/',
+            stub, '/', stub, '.pdf)'),
+    ) %>%
+    select(-stub) %>%
+    janitor::clean_names(case = 'title') %>%
+    rename(PDF = Pdf) %>%
+    kbl() %>%
+     kable_styling(bootstrap_options = c(
+         "striped", "hover", "condensed")) %>%
+    column_spec(column = 1, width = '8em') %>%
+    column_spec(column = 2, width = '25em') %>%
+    column_spec(column = 3, width = '25em') %>%
+    column_spec(column = 4, width = '15em')
 ```
