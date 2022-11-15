@@ -15,7 +15,13 @@ knitr::opts_chunk$set(
 
 # Slides
 
-Slides for various talks I've given 
+## Research overview
+
+General introduction to my current research: [HTML](https://slides.jhelvy.com/helveston-research), [PDF](https://github.com/jhelvy/slides/raw/main/helveston-research/helveston-research.pdf)
+
+## Talks 
+
+Slides for various talks:
 
 ```{r, echo=FALSE}
 library(knitr)
@@ -39,5 +45,6 @@ readr::read_csv('slides.csv') %>%
     column_spec(column = 1, width = '8em') %>%
     column_spec(column = 2, width = '25em') %>%
     column_spec(column = 3, width = '25em') %>%
-    column_spec(column = 4, width = '15em')
+    column_spec(column = 4, width = '8em') %>%
+    column_spec(column = 5, width = '15em')
 ```
