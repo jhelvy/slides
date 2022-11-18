@@ -457,17 +457,18 @@ background-image: url("images/climate-bars.png")
 background-size: cover
 
 <br><br><br><br><br><br><br><br><br><br>
+
 # Thanks!
 
 ### Slides:
 
-### https://github.com/jhelvy/2022-isa-conf-solar
+### https://slides.jhelvy.com/2022-appam-solar-learning/
 
-.footer-large[.white[
-.right[
-@johnhelveston `r fa(name = "twitter", fill = "white")`<br>
+.footer-large[.white[.right[
+
+@jhelvy@fediscience.org `r fa(name = "mastodon", fill = "white")`<br>
+@JohnHelveston `r fa(name = "twitter", fill = "white")`<br>
 @jhelvy `r fa(name = "github", fill = "white")`<br>
-@jhelvy `r fa(name = "weixin", fill = "white")`<br>
 jhelvy.com `r fa(name = "link", fill = "white")`<br>
 jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
 
