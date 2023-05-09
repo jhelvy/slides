@@ -13,7 +13,7 @@
 
 <title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -106,8 +106,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -115,16 +115,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -208,6 +201,28 @@ PDF
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;width: 8em; ">
+2023-05-10
+</td>
+<td style="text-align:left;width: 25em; ">
+Data Analytics at GWU
+</td>
+<td style="text-align:left;width: 25em; ">
+Presentation to the Federal Academic Aliance Program
+</td>
+<td style="text-align:left;width: 8em; ">
+Washington, DC, USA
+</td>
+<td style="text-align:left;width: 15em; ">
+<a
+href="https://slides.jhelvy.com/2023-helveston-da-faa">2023-helveston-da-faa</a>
+</td>
+<td style="text-align:left;">
+<a
+href="https://github.com/jhelvy/slides/raw/main/2023-helveston-da-faa/2023-helveston-da-faa.pdf">PDF</a>
+</td>
+</tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
 2022-11-18
