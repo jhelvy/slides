@@ -1,5 +1,5 @@
 ---
-title: "Quantifying Plug-in Electric Vehicle (PEV) mileage and depreciation"
+title: "Quantifying Plug-in Electric Vehicle<br>Mileage and Depreciation"
 author: "John Paul Helveston, Gang He, & Michael Davidson"
 date: June 1, 2023
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
@@ -70,22 +70,56 @@ meta() %>%
   )
 ```
 
-background-image: url("images/climate-bars.png")
+background-image: url("images/blue.jpg")
 background-size: cover
+class: inverse
 
-<br><br><br><br><br><br><br><br><br>
-
-.rightcol85[.white[
+<br><br><br><br>
 
 ## `r rmarkdown::metadata$title`
 
 **.white[John Paul Helveston]**, George Washington University<br>
-Gang He, Stonybrook University<br>
-Michael Davidson, UC San Diego
+Eliese Ottinger, George Washington University<br>
+Lujin Zhao, George Washington University<br>
+Laura Roberson, George Washington University
 
 `r rmarkdown::metadata$date`
 
-]]
+---
+
+class: middle, center
+background-color: #fff
+
+## Transportation is the largest source of U.S. GHG emissions
+
+<center>
+<img src="images/ghg_emissions.png" width=800>
+</center>
+
+---
+
+# .center[Two Studies, One Dataset]
+
+.leftcol[
+
+### Quantifying Electric Vehicle **Mileage** in the United States
+
+Eliese Ottinger, Undergraduate RA<br>
+Lujin Zhao, Ph.D. Student<br><br>
+
+**Status**: Paper submitted for review soon
+
+]
+
+.rightcol[
+
+### Measuring Electric Vehicle<br>**Resale Value** in the United States
+
+Laura Roberson, Ph.D. Student<br><br><br>
+
+**Status**: Exploratory phase
+
+]
 
 
 
