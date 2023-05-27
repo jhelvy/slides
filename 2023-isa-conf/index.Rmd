@@ -87,14 +87,25 @@ Laura Roberson, George Washington University
 
 ---
 
-class: middle, center
+class: middle
 background-color: #fff
 
-## Transportation is the largest source of U.S. GHG emissions
+## .center[Transportation is the largest source of U.S. GHG emissions]
+
+.leftcol70[
 
 <center>
 <img src="images/ghg_emissions.png" width=800>
 </center>
+
+]
+
+.rightcol30[
+
+Text
+
+]
+
 
 ---
 
@@ -121,12 +132,113 @@ Laura Roberson, Ph.D. Student<br><br><br>
 
 ]
 
+---
+
+class: center
+background-color: #fff
+
+## BEVs are driven significantly less than other powertrains
+
+<center>
+<img src="images/mileage-all.png" width=100%>
+</center>
+
+---
+
+background-color: #fff
+
+.leftcol70[
+
+<center>
+<img src="images/mileage-scatter.png" width=100%>
+</center>
+
+]
+
+.rightcol30[
+
+
+
+]
+
+---
+
+background-color: #fff
+
+.leftcol65[
+
+<br>
+<center>
+<img src="images/mileage-bev.png" width=100%>
+</center>
+
+]
+
+.rightcol35[
+
+
+]
+
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/cost-per-mile.png" width=900>
+</center>
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/equivalence.png" width=900>
+</center>
+
+
+---
+
+background-color: #fff
+
+## .center[PEVs are depreciating faster than CVs and HEVs]
+
+<center>
+<img src="images/rr-all.png" width=100%>
+</center>
+
+---
+
+class: middle, center
+background-color: #fff
+
+.leftcol[
+
+## $\frac{Price}{MSRP}$
+
+<center>
+<img src="images/rr-bev.png" width=100%>
+</center>
+
+]
+
+--
+
+.rightcol[
+
+## $\frac{Price}{MSRP - Subsidy}$
+
+<center>
+<img src="images/arr-bev.png" width=100%>
+</center>
+
+]
 
 
 ---
 
 class: inverse 
-background-image: url("images/climate-bars.png")
+background-image: url("images/blue.jpg")
 background-size: cover
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -135,7 +247,7 @@ background-size: cover
 
 ### Slides:
 
-### https://slides.jhelvy.com/2022-appam-solar-learning/
+### https://slides.jhelvy.com/2023-isa-conf/
 
 .footer-large[.white[.right[
 
