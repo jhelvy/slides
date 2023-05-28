@@ -90,22 +90,11 @@ Laura Roberson, George Washington University
 class: middle
 background-color: #fff
 
-## .center[Transportation is the largest source of U.S. GHG emissions]
-
-.leftcol70[
+## .center[.font90[Electrifying the passenger vehicle fleet is a critical climate goal]]
 
 <center>
 <img src="images/ghg_emissions.png" width=800>
 </center>
-
-]
-
-.rightcol30[
-
-Text
-
-]
-
 
 ---
 
@@ -113,7 +102,7 @@ Text
 
 .leftcol[
 
-### Quantifying Electric Vehicle **Mileage** in the United States
+### Measuring Electric Vehicle **Mileage** in the United States
 
 Eliese Ottinger, Undergraduate RA<br>
 Lujin Zhao, Ph.D. Student<br><br>
@@ -132,6 +121,23 @@ Laura Roberson, Ph.D. Student<br><br><br>
 
 ]
 
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/table-lit.png" width=100%>
+</center>
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/table-data-summary.png" width=100%>
+</center>
+
 ---
 
 class: center
@@ -142,6 +148,19 @@ background-color: #fff
 <center>
 <img src="images/mileage-all.png" width=100%>
 </center>
+
+
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/table-reg-pooled.png" width=800>
+</center>
+
+
+
 
 ---
 
@@ -178,6 +197,15 @@ background-color: #fff
 
 
 ]
+
+
+---
+
+background-color: #fff
+
+<center>
+<img src="images/table-reg-powertrain.png" width=1000>
+</center>
 
 
 ---
