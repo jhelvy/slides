@@ -126,8 +126,10 @@ Laura Roberson, Ph.D. Student<br><br><br>
 
 background-color: #fff
 
+### .center[Inconsistent mileage conclusions in prior studies]
+
 <center>
-<img src="images/table-lit.png" width=100%>
+<img src="images/table-lit.png" width=900>
 </center>
 
 ---
