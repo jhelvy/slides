@@ -104,8 +104,9 @@ background-color: #fff
 
 ### Measuring Electric Vehicle **Mileage** in the United States
 
-Eliese Ottinger, Undergraduate RA<br>
-Lujin Zhao, Ph.D. Student<br><br>
+Lujin Zhao (Ph.D. Student)<br>
+Eliese Ottinger (Undergraduate RA)<br>
+
 
 **Status**: Paper submitted for review soon
 
@@ -115,12 +116,21 @@ Lujin Zhao, Ph.D. Student<br><br>
 
 ### Measuring Electric Vehicle<br>**Resale Value** in the United States
 
-Laura Roberson, Ph.D. Student<br><br><br>
+Laura Roberson (Ph.D. Student)<br><br>
 
 **Status**: Exploratory phase
 
 ]
 
+---
+
+class: middle, inverse
+
+### Going the Distance:<br>Quantifying Electric Vehicle Mileage in the United States
+
+Lujin Zhao (Ph.D. Student)<br>
+Eliese Ottinger (Undergraduate RA)<br>
+John Paul Helveston, Ph.D.
 
 ---
 
@@ -150,7 +160,7 @@ background-color: #fff
 ### .center[**Data**: ~13M used vehicle listings from 60k dealerships (2016 - 2022)]
 
 <center>
-<img src="images/table-data-summary.png" width=900>
+<img src="images/table-data-summary.png" width=850>
 </center>
 
 ---
@@ -164,18 +174,23 @@ background-color: #fff
 <img src="images/mileage-all.png" width=100%>
 </center>
 
-
-
 ---
 
 background-color: #fff
+
+.leftcol80[
 
 <center>
 <img src="images/table-reg-pooled.png" width=800>
 </center>
 
+]
 
+.rightcol20[
 
+### BEVs driven ~4,000 miles less than CVs on average
+
+]
 
 ---
 
@@ -191,28 +206,20 @@ background-color: #fff
 
 .rightcol30[
 
-
+### BEVs driven ~4,000 miles less than CVs on average
 
 ]
 
 ---
 
 background-color: #fff
+class: center
 
-.leftcol65[
+### Teslas driven more than non-Tesla BEVs
 
-<br>
 <center>
-<img src="images/mileage-bev.png" width=100%>
+<img src="images/mileage-bev.png" width=800>
 </center>
-
-]
-
-.rightcol35[
-
-
-]
-
 
 ---
 
@@ -222,12 +229,13 @@ background-color: #fff
 <img src="images/table-reg-powertrain.png" width=1000>
 </center>
 
-
 ---
 
 background-color: #fff
 
 <center>
+<img src="images/table-reg-powertrain-cpm.png" width=1000>
+<br>
 <img src="images/cost-per-mile.png" width=900>
 </center>
 
@@ -238,6 +246,17 @@ background-color: #fff
 <center>
 <img src="images/equivalence.png" width=900>
 </center>
+
+---
+
+class: middle, inverse
+
+### Measuring Electric Vehicle Mileage in the United States
+
+Lujin Zhao (Ph.D. Student)<br>
+Eliese Ottinger (Undergraduate RA)<br>
+John Paul Helveston, Ph.D.
+
 
 
 ---
