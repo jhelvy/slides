@@ -291,6 +291,8 @@ class: center
 
 # .center[We really need to understand PEV resale value]
 
+<br>
+
 ### - Depreciation is a key component in "Total Cost of Ownership" (TCO) models, e.g. [ANL's TCO Study](https://publications.anl.gov/anlpubs/2021/05/167399.pdf)
 
 --
@@ -303,13 +305,53 @@ class: center
 
 ---
 
+class: center
 background-color: #fff
 
-## .center[PEVs are depreciating faster than CVs and HEVs]
+## BEVs & PHEVs are depreciating worse than CVs and HEVs
+
+### (Except Tesla)
 
 <center>
 <img src="images/rr-all.png" width=100%>
 </center>
+
+Data: All listings between 2016 - 2019 (inclusive)
+
+---
+
+class: center
+
+.leftcol[
+
+## New Market
+
+(MSRP - Subsidy = Price)<br>
+$30,000 - $7,500 = **$22,500**
+
+<center>
+<img src="images/nissan-leaf.png" width=100%>
+</center>
+
+<br><br>
+.font70[.left[Image source: https://www.pngwing.com/en/free-png-yaftj]]
+
+]
+
+--
+
+.rightcol[
+
+## Used Market
+
+(Assuming adequate supply)<br>
+Max Price = **$22,500**
+
+<center>
+<img src="images/nissan-leaf.png" width=100%>
+</center>
+
+]
 
 ---
 
@@ -337,7 +379,6 @@ background-color: #fff
 </center>
 
 ]
-
 
 ---
 
