@@ -551,6 +551,23 @@ background-color: #fff
 background-color: #fff
 class: center
 
+### (Super preliminary modeling results)
+
+.font80[
+
+<center>
+<img src="images/table-reg-rr.png" width=100%>
+</center>
+
+$rr = \beta_0 + \beta_1\log(age)+\beta_2\log(miles)+\beta_3\log(cents\_p\_mile)+\beta_4\log(range)+\epsilon_i$
+
+]
+
+---
+
+background-color: #fff
+class: center
+
 ## Some (tentative) evidence that newer PEVs are depreciating less than older PEVs
 
 <center>
@@ -569,11 +586,15 @@ class: center
 
 --
 
+### Which PEV features matter for retaining value?
+
+--
+
 ### Is this changing over time?
 
 --
 
-### What is the impact of new car subsidies on depreciation?
+### What is the impact of new car subsidies on pricing in the used market?
 
 ---
 
