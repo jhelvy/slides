@@ -93,6 +93,16 @@ Laura Roberson (Ph.D. Student)&lt;br&gt;&lt;br&gt;
 
 ---
 
+background-color: #fff
+
+### .center[**Data**: ~13M used vehicle listings from 60k dealerships (2016 - 2022)]
+
+&lt;center&gt;
+&lt;img src="images/table-data-summary.png" width=850&gt;
+&lt;/center&gt;
+
+---
+
 class: middle, inverse
 
 ## Going the Distance:&lt;br&gt;Quantifying Electric Vehicle Mileage in the United States
@@ -111,11 +121,15 @@ The George Washington University
 
 --
 
+### - PEV emissions reduction benefit **depends on vehicle usage**&lt;br&gt;.font80[[Jenn (2020)](https://www.nature.com/articles/s41560-020-0632-7)]
+
+--
+
 ### - Energy modelers typically assume **CV miles = BEV miles**
 
 --
 
-### - Tax planning: proposed **mileage taxes** scale with mileage!&lt;br&gt;.font80[[Metcalf et al. (2022)](https://doi.org/10.1086/722672); [Zhao and Mattauch (2022)](https://doi.org/10.1016/j.jeem.2022.102747); [Davis and Sallee (2020)](https://doi.org/10.1086/706793)]
+### - Revenue from proposed mileage tax **depends on vehicle usage**&lt;br&gt;.font80[[Metcalf et al. (2022)](https://doi.org/10.1086/722672); [Zhao and Mattauch (2022)](https://doi.org/10.1016/j.jeem.2022.102747); [Davis and Sallee (2020)](https://doi.org/10.1086/706793)]
 
 --
 
@@ -144,12 +158,24 @@ background-size: cover
 
 ---
 
+class: center
 background-color: #fff
 
-### .center[**Data**: ~13M used vehicle listings from 60k dealerships (2016 - 2022)]
+## BEVs are driven significantly less than other powertrains
 
 &lt;center&gt;
-&lt;img src="images/table-data-summary.png" width=850&gt;
+&lt;img src="images/mileage-all.png" width=100%&gt;
+&lt;/center&gt;
+
+---
+
+background-color: #fff
+class: center
+
+### Teslas driven more than non-Tesla BEVs (but not as much as CVs)
+
+&lt;center&gt;
+&lt;img src="images/mileage-bev.png" width=800&gt;
 &lt;/center&gt;
 
 ---
@@ -163,6 +189,8 @@ background-color: #fff
 &lt;img src="images/mileage-all.png" width=100%&gt;
 &lt;/center&gt;
 
+`\(mileage = \beta_0 + \beta_1age+\beta_2{age*powertrain}+\beta_3{age}*cents\_p\_mile+\epsilon_i\)`
+
 ---
 
 background-color: #fff
@@ -170,14 +198,48 @@ background-color: #fff
 .leftcol80[
 
 &lt;center&gt;
-&lt;img src="images/table-reg-pooled.png" width=800&gt;
+&lt;img src="images/table-reg-pooled.png" width=100%&gt;
+&lt;/center&gt;
+
+]
+
+---
+
+background-color: #fff
+
+.leftcol80[
+
+&lt;center&gt;
+&lt;img src="images/table-reg-pooled1.png" width=100%&gt;
 &lt;/center&gt;
 
 ]
 
 .rightcol20[
 
-### BEVs driven ~4,000 miles less than CVs on average
+### .red[BEVs driven 4,700 miles less than CVs on average]
+
+]
+
+---
+
+background-color: #fff
+
+.leftcol80[
+
+&lt;center&gt;
+&lt;img src="images/table-reg-pooled2.png" width=100%&gt;
+&lt;/center&gt;
+
+]
+
+.rightcol20[
+
+### BEVs driven 4,700 miles less than CVs on average
+
+### .red[Non-Tesla BEVs:&lt;br&gt;-5,600 miles]
+
+### .blue[Tesla:&lt;br&gt;-3,000 miles]
 
 ]
 
@@ -195,46 +257,124 @@ background-color: #fff
 
 .rightcol30[
 
-### BEVs driven ~4,000 miles less than CVs on average
+### BEVs:&lt;br&gt;~7k mi/yr
+
+### All others:&lt;br&gt;~11k - 12k mi/yr
+
+&lt;br&gt;
+
+### Far less variability in BEV mileage than CV mileage
 
 ]
 
 ---
 
 background-color: #fff
-class: center
-
-### Teslas driven more than non-Tesla BEVs
 
 &lt;center&gt;
-&lt;img src="images/mileage-bev.png" width=800&gt;
+&lt;img src="images/table-reg-powertrain.png" width=600&gt;
 &lt;/center&gt;
 
 ---
 
 background-color: #fff
 
+.leftcol80[
+
 &lt;center&gt;
-&lt;img src="images/table-reg-powertrain.png" width=1000&gt;
+&lt;img src="images/table-reg-powertrain-zoom.png" width=100%&gt;
 &lt;/center&gt;
+
+]
+
+.rightcol20[
+
+Modest range effect:
+
+.blue[+100 mi range = +200 mi/yr]
+
+&lt;br&gt;
+
+.red[Tesla effect isn't just from range]
+
+]
 
 ---
 
 background-color: #fff
+
+### .center[BEV mileage less sensitive to operating cost than CV mileage]
 
 &lt;center&gt;
 &lt;img src="images/table-reg-powertrain-cpm.png" width=1000&gt;
-&lt;br&gt;
-&lt;img src="images/cost-per-mile.png" width=900&gt;
 &lt;/center&gt;
+
+1 cent increase in operating cost:
+
+BEV: -87 mi/yr&lt;br&gt;
+CV: -217 mi/yr&lt;br&gt;
+HEV: -343 mi/yr
 
 ---
 
 background-color: #fff
 
+### .center[BEV mileage less sensitive to operating cost than CV mileage]
+
 &lt;center&gt;
-&lt;img src="images/equivalence.png" width=850&gt;
+&lt;img src="images/table-reg-powertrain-cpm.png" width=1000&gt;
 &lt;/center&gt;
+
+.leftcol70[
+
+&lt;center&gt;
+&lt;img src="images/cost-per-mile.png" width=600&gt;
+&lt;/center&gt;
+
+]
+
+.rightcol30[
+
+1 cent increase in operating cost:
+
+BEV: -87 mi/yr&lt;br&gt;
+CV: -217 mi/yr&lt;br&gt;
+HEV: -343 mi/yr
+
+(BEVs have much lower operating costs)
+
+]
+
+---
+
+class: center
+background-color: #fff
+
+### Gas needs to be $4-6/gal for equal mileage between CV &amp; Tesla Model 3
+
+&lt;center&gt;
+&lt;img src="images/equivalence.png" width=800&gt;
+&lt;/center&gt;
+
+---
+
+## Key takeaways
+
+--
+
+### - BEVs are driven significantly less than other powertrains:&lt;br&gt;.red[Non-Tesla BEVs: -5,600 miles]; .blue[Tesla: -3,000 miles]
+
+--
+
+### - Far less variability in BEV mileage than CV mileage&lt;br&gt;(BEVs only substituting for lower-mileage CV usage)
+
+--
+
+### - BEV mileage less sensitive to operating cost than CV mileage
+
+--
+
+### - Even for Teslas, equal mileage with CVs requires higher gas prices
 
 ---
 
