@@ -9,7 +9,6 @@ output:
       - default
       - css/lexis.css
       - css/lexis-fonts.css
-      - css/custom.css
     lib_dir: libs
     nature:
       highlightStyle: github
