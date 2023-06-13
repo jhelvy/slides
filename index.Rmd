@@ -34,13 +34,7 @@ readr::read_csv('slides.csv') %>%
             '[', stub,  '](https://slides.jhelvy.com/', stub, ')'),
         pdf = paste0(
             '[PDF](https://github.com/jhelvy/slides/raw/main/',
-            stub, '/', stub, '.pdf)'),
-        slides = ifelse(
-            !is.na(link), 
-            paste0('[', stub,  '](', link, ')'), 
-            slides
-        ),
-        pdf = ifelse(!is.na(link), '', pdf)
+            stub, '/', stub, '.pdf)')
     ) %>%
     select(-stub, -link) %>%
     janitor::clean_names(case = 'title') %>%
