@@ -1,7 +1,8 @@
 ---
-title: "Intro"
+title: "Using Marketing Analytics to Measure Consumer Preferences and Inform Policy"
+date: February 21, 2024
 author: "John Paul Helveston, Ph.D."
-institute: "Dept. of Engineering Management and Systems Engineering"
+institute: "Eng. Management & Systems Eng."
 output:
   xaringan::moon_reader:
     css:
@@ -74,24 +75,30 @@ layout: true
 
 <div class="footer-small">
 <span>
-<a href="#background">Background</a> | <a href="#choose">Conjoint Studies</a> | <a href="#packages">Software</a> | <a href="#cars">Listings Project</a>
+<a href="#background">Background</a> | <a href="#choose">Conjoint Studies</a> | <a href="#packages">Software</a>
 </span>
 </div>
 
 ---
 
-class: middle, inverse
+# .center[`r rmarkdown::metadata$title`]
+
+<br>
 
 .leftcol40[
+
 <center>
-<img src="images/topics.png" width=100%>
+<img src="images/gwu.png" width=300>
 </center>
+
 ]
 
-.rightcol60[
-### `r fontawesome::fa(name = "user", fill = "white")` `r rmarkdown::metadata$author`
-### `r fontawesome::fa(name = "university", fill = "white")` `r rmarkdown::metadata$institute`
-### `r fontawesome::fa(name = "calendar-alt", fill = "white")` `r rmarkdown::metadata$date`
+.rightcol55[
+
+### `r fontawesome::fa(name = "user", fill = "black")` `r rmarkdown::metadata$author`
+### `r fontawesome::fa(name = "university", fill = "black")` `r rmarkdown::metadata$institute`
+### `r fontawesome::fa(name = "calendar-alt", fill = "black")` `r rmarkdown::metadata$date`
+
 ]
 
 ---
@@ -101,50 +108,81 @@ name: background
 # Hello World!
 
 .leftcol30[.circle[
-<img src="https://p4a.seas.gwu.edu/2020-Fall/images/helveston.jpg" width="300">
+
+<img src="images/john_helveston_circle.png" width="300">
+
 ]]
+
 .rightcol70[
 
-### John Paul Helveston, Ph.D.
+### John Helveston, Ph.D.
 
 .font80[
-Assistant Professor, Engineering Management & Systems Engineering
-Website: [www.jhelvy.com](http://www.jhelvy.com/)
 
-- 2010 BS in Engineering Science & Mechanics at Virginia Tech
-- 2015 MS in Engineering & Public Policy at Carnegie Mellon University
-- 2016 PhD in Engineering & Public Policy at Carnegie Mellon University
+Assistant Professor, Engineering Management & Systems Engineering
+
 - 2016-2018 Postdoc at [Institute for Sustainable Energy](https://www.bu.edu/ise/), Boston University
+- 2016 PhD in Engineering & Public Policy at Carnegie Mellon University
+- 2015 MS in Engineering & Public Policy at Carnegie Mellon University
+- 2010 BS in Engineering Science & Mechanics at Virginia Tech
+- Website: [www.jhelvy.com](http://www.jhelvy.com/)
+
 ]]
 
 ---
 
 class: center
 
-## Technology Change Lab 
+## Technology Change Lab
 
-> I study how consumers, firms, markets, and policies affect technology change to <br> facilitate transitions to sustainable and low-carbon technologies.
+> I study how consumers, firms, markets, and policy affect technological change, with a focus on accelerating the transition to low-carbon technologies
 
 .cols3[
+
 ### .center[Electric & Sustainable Vehicle Technologies]
+
 <center>
 <img src="images/ev.png" width=280>
 </center>
+
 ]
 
 .cols3[
+
 ### .center[Market & Policy Analysis]
+
 <center>
 <img src="images/market.png" width=250>
 </center>
+
 ]
 
 .cols3[
+
 ### .center[U.S. - China Climate Relationship]
+
 <center>
 <img src="images/uschina.png" width=100%>
 </center>
+
 ]
+
+---
+
+class: center
+background-color: #fff
+
+# What is Data Analytics?
+
+.font120[The science of analyzing raw data to draw out<br>**meaningful & actionable insights** to **inform decision-making**]
+
+--
+
+<center>
+<img src="images/da-process.png" width=1000>
+</center>
+
+Image from https://r4ds.hadley.nz/
 
 ---
 
@@ -652,105 +690,13 @@ Tools for designing choice based conjoint (cbc) survey experiments and conductio
 
 ---
 
-name: cars
-class: middle, inverse 
-
-# .center[Analyzing historical vehicle listings data]
-
-.leftcol[
-
-<center>
-<img src="images/cars.png" width=400>
-</center>
-
-]
-
-.rightcol[
-
-- New and used cars from 2015-2019
-- ~55,000 dealerships
-
-Powertrain | Listings 
------------|-----------
-Gasoline   | 22,769,637
-Hybrid | 749,460
-Battery Electric (BEV) | 87,852
-Plug-In Hybrid (PHEV) | 112,222
-
-]
-
----
-
-# .center[Estimating residual value of EVs]
-
-.leftcol30[
-
-John P. Helveston, Assistant Professor, EMSE
-
-Laura Roberson, Ph.D. Student, EMSE
-
-]
-
-.rightcol70[
-
-<center>
-<img src="images/cars-depreciation.png" width=600>
-</center>
-
-]
-
----
-
-# .center[Where are the EVs?]
-
-.leftcol30[
-
-John P. Helveston, Assistant Professor, EMSE
-
-Kazi Asifa, Undergraduate Student, EMSE
-
-2019 study be Sierra Club found that 74% of dealerships are not selling EVs
-
-]
-
-.rightcol70[
-
-<center>
-<img src="images/cars-ev-map.png" width=100%>
-</center>
-
-]
-
----
-
-### .center[EVs are disproportionately supplied to ZEV states]
-
-<center>
-<img src="images/cars-zev-heatmap.png" width=680>
-</center>
-
----
-
-background-color: #fff
-
-## .center[Do EV owners drive as much as gasoline car owners?]
-
-John P. Helveston, Assistant Professor, EMSE<br>
-Eliese Ottinger, Undergraduate Student, EMSE
-
-<center>
-<img src="images/cars-mileage.png" width=1000>
-</center>
-
----
-
 class: inverse
 
 <br>
 
 # .center[.font150[Thanks!]]
 
-### .center[Slides: https://github.com/jhelvy/research]
+### .center[Slides: https://slides.jhelvy.com/]
 
 .footer-large[
 
