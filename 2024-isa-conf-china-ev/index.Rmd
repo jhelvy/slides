@@ -496,6 +496,25 @@ class: inverse, middle
 
 ---
 
+background-color: #FFF
+class: middle
+
+.leftcol80[
+
+<center>
+<img src="images/annual-sales.png" width=98%>
+</center>
+
+]
+
+.rightcol20[
+
+### China's real overcapacity problem:<br>**ICE cars**
+
+]
+
+---
+
 class: inverse
 
 .leftcol80[
@@ -511,25 +530,6 @@ class: inverse
 ### Recent surge driven by ICE exports to Russia
 
 <br>[Source](https://x.com/gdp1985/status/1795562850678710700)
-
-]
-
----
-
-background-color: #FFF
-class: middle
-
-.leftcol80[
-
-<center>
-<img src="images/annual-sales.png" width=98%>
-</center>
-
-]
-
-.rightcol20[
-
-### China's real overcapacity problem:<br>**ICE cars**
 
 ]
 
