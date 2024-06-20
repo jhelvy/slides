@@ -350,6 +350,10 @@ background-color: #fff
 
 ### - BEV mileage less sensitive to operating cost than CV mileage
 
+--
+
+### - Range increases mileage for low-range BEVs more than high-range BEVs
+
 ---
 
 class: middle, inverse
