@@ -486,17 +486,6 @@ class:center
 background-color: #fff
 class:center 
 
-## Two year $r$ by model shows huge gains in newer BEVs
-
-<center>
-<img src="images/rr-by-model.png" width=100%>
-</center>
-
----
-
-background-color: #fff
-class:center 
-
 .leftcol25[
 
 <br>
@@ -799,3 +788,14 @@ Max Price = **$22,500**
 </center>
 
 ]
+
+---
+
+background-color: #fff
+class:center
+
+## Two year $r$ by model shows huge gains in newer BEVs
+
+<center>
+<img src="images/rr-by-model.png" width=100%>
+</center>
