@@ -1,5 +1,5 @@
 ---
-title: "Spatial Disparities in Plug-in Electric Vehicle Availability and Affordability in the United States"
+title: "Disparities in Plug-in Electric Vehicle Availability and Affordability in the United States"
 author: "John Paul Helveston, Zain Hoda, Daniel Fisher, & Lujin Zhao"
 date: January 09, 2025
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
