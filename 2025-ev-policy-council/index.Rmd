@@ -1,0 +1,126 @@
+---
+title: "Spatial Disparities in Plug-in Electric Vehicle Availability and Affordability in the United States"
+author: "John Paul Helveston, Zain Hoda, Daniel Fisher, & Lujin Zhao"
+date: January 09, 2025
+institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(fontawesome)
+library(tidyverse)
+library(metathis)
+
+options(
+    htmltools.dir.version = FALSE,
+    knitr.table.format = "html",
+    knitr.kable.NA = '',
+    dplyr.width = Inf,
+    width = 250
+)
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    fig.path = "figs/",
+    fig.width = 7.252,
+    fig.height = 4,
+    comment = "#>",
+    fig.retina = 3
+)
+
+# Setup xaringanExtra options
+xaringanExtra::use_xaringan_extra(c(
+  "tile_view", "panelset", "share_again"))
+xaringanExtra::style_share_again(share_buttons = "none")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+
+# Set up website metadata
+meta() %>%
+  meta_general(
+    description = rmarkdown::metadata$subtitle,
+    generator = "xaringan and remark.js"
+  ) %>%
+  meta_name("github-repo" = "jhelvy/slides") %>%
+  meta_social(
+    title = rmarkdown::metadata$title,
+    url = "https://slides.jhelvy.com",
+    og_type = "website",
+    og_author = "John Paul Helveston",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@johnhelveston"
+  )
+```
+
+background-image: url("images/blue.jpg")
+background-size: cover
+class: inverse
+
+<br><br><br><br>
+
+## `r rmarkdown::metadata$title`
+
+**.white[John Paul Helveston]**, George Washington University<br>
+Zain Hoda, George Washington University<br>
+Daniel Fisher, George Washington University<br>
+Lujin Zhao, George Washington University<br>
+
+`r rmarkdown::metadata$date`
+
+---
+
+class: middle, center
+
+### Most EVs have been purchased by wealthy households
+
+### Incentives are aligned to concentrate EVs in certain states
+
+---
+
+background-color: #fff
+
+### .center[**Data**: ~13M used vehicle listings from 60k dealerships (2016 - 2022)]
+
+<center>
+<img src="images/table-data-summary.png" width=850>
+</center>
+
+
+
+---
+
+class: inverse 
+background-image: url("images/blue.jpg")
+background-size: cover
+
+<br><br><br><br><br><br><br><br><br><br>
+
+# Thanks!
+
+### Slides:
+
+### https://slides.jhelvy.com/2025-ev-policy-council/
+
+.footer-large[.white[.right[
+
+@jhelvy.bsky.social `r fa(name = "bluesky", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+
+]]]
