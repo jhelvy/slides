@@ -23,6 +23,8 @@ library(knitr)
 library(fontawesome)
 library(tidyverse)
 library(metathis)
+library(kableExtra)
+library(here)
 
 options(
     htmltools.dir.version = FALSE,
@@ -65,6 +67,28 @@ meta() %>%
     twitter_card_type = "summary_large_image",
     twitter_creator = "@johnhelveston"
   )
+
+# Vehicle listings summary table
+summary_dt_raw <- read_csv(here('data', 'listings_summary.csv'))
+total_listings <- sum(summary_dt_raw$n) / 10^6
+summary_dt <- summary_dt_raw %>% 
+    mutate(
+        n = scales::comma(n), 
+        vehicle_type = ifelse(vehicle_type == 'car', 'Car', 'SUV')
+    ) %>% 
+    pivot_wider(
+        names_from = powertrain,
+        values_from = n
+    ) %>% 
+    select(
+        Type = vehicle_type,
+        Conventional = conventional, 
+        Hybrid = hybrid, 
+        PHEV = phev, 
+        BEV = bev, 
+        inventory_type
+    ) %>% 
+    mutate(PHEV = ifelse(is.na(PHEV), 0, PHEV))
 ```
 
 background-image: url("images/blue.jpg")
@@ -86,22 +110,42 @@ Lujin Zhao, George Washington University<br>
 
 class: middle, center
 
-### Most EVs have been purchased by wealthy households
+## Addressing the **“innovation-needs paradox”**:
 
-### Incentives are aligned to concentrate EVs in certain states
+## The people most likely to benefit from a technology<br>are often the last ones to adopt it.
+
+
+
+
 
 ---
 
+class: center
 background-color: #fff
 
-### .center[**Data**: ~13M used vehicle listings from 60k dealerships (2016 - 2022)]
+### .center[**Data**: `r round(total_listings, 1)`M used vehicle listings from ~60k dealerships<br>(2016 - 2021, inclusive)]
 
-<center>
-<img src="images/table-data-summary.png" width=850>
-</center>
+#### New Vehicles
 
+```{r}
+#| echo: false
 
+summary_dt %>%
+    filter(inventory_type == 'new') %>% 
+    select(-inventory_type) %>% 
+    kbl() 
+```
 
+#### Used Vehicles
+
+```{r}
+#| echo: false
+
+summary_dt %>%
+    filter(inventory_type == 'used') %>% 
+    select(-inventory_type) %>% 
+    kbl() 
+```
 ---
 
 class: inverse 

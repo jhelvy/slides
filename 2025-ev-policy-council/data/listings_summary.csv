@@ -1,0 +1,15 @@
+powertrain,vehicle_type,inventory_type,n
+bev,car,new,93939
+bev,suv,new,48284
+conventional,car,new,3246993
+conventional,suv,new,5234631
+conventional,car,used,17488916
+conventional,suv,used,17071227
+phev,car,used,146820
+hybrid,suv,used,108173
+hybrid,car,new,154188
+hybrid,car,used,885266
+hybrid,suv,new,65507
+phev,car,new,40206
+bev,car,used,212119
+bev,suv,used,26979
