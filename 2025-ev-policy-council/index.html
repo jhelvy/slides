@@ -148,11 +148,49 @@ class: center, middle
 
 ---
 
+class: center
+background-color: #fff
+
+# What % of dealerships have at least one PEV?
+
+&lt;center&gt;
+&lt;img src="images/dealercounts.png" width=100%&gt;
+&lt;/center&gt;
+
+---
+
+background-color: #fff
+
+## PEV “access burden”: additional travel time to see a BEV
+
+.leftcol[
+
+#### Access burden:
+
+1. Find closest CV and BEV dealerships from census tract centroid. 
+2. Compute road travel time* to each dealership: `\(t_{\mathrm{PEV}}\)` and `\(t_{\mathrm{CV}}\)`
+3. Compute “Burden” as difference in travel time: `\(b = t_{\mathrm{PEV}} - t_{\mathrm{CV}}\)`
+
+&lt;br&gt;
+
+*Road travel times obtained using&lt;br&gt;Open Street Road Map (OSRM)
+
+]
+
+.rightcol[.border[
+
 &lt;center&gt;
 &lt;img src="images/tract-diagram.png" width=100%&gt;
 &lt;/center&gt;
 
+]]
+
 ---
+
+class: center
+background-color: #fff
+
+## PEV Access Burden
 
 &lt;center&gt;
 &lt;img src="images/travel_burden_map.png" width=100%&gt;
@@ -160,14 +198,24 @@ class: center, middle
 
 ---
 
+class: center
+background-color: #fff
+
+### Access burden is shrinking in magnitude and spatial variation
+
 &lt;center&gt;
-&lt;img src="images/box_plot.png" width=100%&gt;
+&lt;img src="images/box_plot.png" width=700&gt;
 &lt;/center&gt;
 
 ---
 
+class: center
+background-color: #fff
+
+## Significant variation by urban status, but also shrinking
+
 &lt;center&gt;
-&lt;img src="images/median_region.png" width=100%&gt;
+&lt;img src="images/median_region.png" width=700&gt;
 &lt;/center&gt;
 
 ---
