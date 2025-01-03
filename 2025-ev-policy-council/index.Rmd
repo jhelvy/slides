@@ -88,7 +88,8 @@ summary_dt <- summary_dt_raw %>%
         BEV = bev, 
         inventory_type
     ) %>% 
-    mutate(PHEV = ifelse(is.na(PHEV), 0, PHEV))
+    mutate(PHEV = ifelse(is.na(PHEV), 0, PHEV)) %>% 
+    rename(CV = Conventional, HEV = Hybrid)
 ```
 
 background-image: url("images/blue.jpg")
@@ -114,16 +115,12 @@ class: middle, center
 
 ## The people most likely to benefit from a technology<br>are often the last ones to adopt it.
 
-
-
-
-
 ---
 
 class: center
 background-color: #fff
 
-### .center[**Data**: `r round(total_listings, 1)`M used vehicle listings from ~60k dealerships<br>(2016 - 2021, inclusive)]
+### .center[**Data**: `r round(total_listings, 1)`M vehicle listings from ~60k dealerships (marketcheck.com)<br>(2016 - 2021, inclusive)]
 
 #### New Vehicles
 
@@ -146,6 +143,65 @@ summary_dt %>%
     select(-inventory_type) %>% 
     kbl() 
 ```
+
+---
+
+class: center, middle
+
+.leftcol[
+
+# Availability
+
+]
+
+.rightcol[
+
+# Affordability
+
+]
+
+---
+
+<center>
+<img src="images/tract-diagram.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/travel_burden_map.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/box_plot.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/median_region.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/pop_cfp.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/" width=100%>
+</center>
+
 ---
 
 class: inverse 
