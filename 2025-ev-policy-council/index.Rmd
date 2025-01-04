@@ -146,19 +146,31 @@ summary_dt %>%
 
 ---
 
-class: center, middle
+class: middle
 
 .leftcol[
 
-# Availability
+# .center[Availability]
 
-]
+.font140[
+
+- How many dealerships are carrying PEVs?
+- How hard is it to get to a PEV?
+
+]]
+
+--
 
 .rightcol[
 
-# Affordability
+# .center[Affordability]
 
-]
+.font140[
+
+- How affordable are PEVs to communities with different incomes?
+- How many people are elligible for the used PEV subsidy?
+
+]]
 
 ---
 
@@ -226,7 +238,7 @@ background-color: #fff
 class: center
 background-color: #fff
 
-## Significant variation by urban status, but also shrinking
+### Significant variation by urban status, but also shrinking
 
 <center>
 <img src="images/median_region.png" width=700>
