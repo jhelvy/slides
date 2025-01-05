@@ -1,5 +1,5 @@
 ---
-title: "Disparities in Plug-in Electric Vehicle Availability and Affordability in the United States"
+title: "Exploring Disparities in Battery Electric Vehicle Affordability and Availability"
 author: "John Paul Helveston, Zain Hoda, Daniel Fisher, & Lujin Zhao"
 date: January 09, 2025
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
@@ -156,11 +156,13 @@ summary_dt %>%
 
 ]
  
+<br>
+
 # .center[Affordability]
 
 .font120[
 
-3) How affordable are BEVs to communities with different incomes?
+3) How affordable are BEVs?
 
 4) How many people are eligible for the used PEV subsidy?
 
@@ -206,6 +208,25 @@ class: center, middle
 
 ---
 
+.leftcol55[
+
+<center>
+<img src="images/state_bev_percent.png" width=100%>
+</center>
+
+]
+
+.rightcol45[.font120[
+
+- BEV inventories still low at most dealerships
+- Something of a "ZEV Effect" in new market
+- Used market more diffuse
+
+]]
+
+
+---
+
 class: inverse, middle, center
 
 # How hard is it to get to a BEV dealer?
@@ -248,14 +269,22 @@ background-size: contain
 
 ---
 
-class: center
+class: center, middle
 background-color: #fff
 
-### Significant variation by urban status, but also shrinking
+.leftcol70[
 
 <center>
-<img src="images/median_region.png" width=700>
+<img src="images/median_region.png" width=100%>
 </center>
+
+]
+
+.rightcol30[
+
+### Largest disparities in BEV travel burden is in **rural** areas, but this is rapidly improving
+
+]
 
 ---
 
@@ -269,7 +298,7 @@ background-color: #fff
 
 .rightcol40[
 
-# Text
+### BEV travel burden still high for **affordable** BEVs in rural areas
 
 ]
 
@@ -277,9 +306,23 @@ background-color: #fff
 
 class: inverse, middle, center
 
-# How affordable are BEVs to communities with different incomes?
+# How affordable are BEVs?
 
 ---
+
+class: center
+
+### Most BEV supply growth in higher-price segments<br>.font80[(and overall supply still quite low)]
+
+<center>
+<img src="images/availability.png" width=100%>
+</center>
+
+---
+
+class: center
+
+# Price to income histograms
 
 <center>
 <img src="images/" width=100%>
@@ -396,4 +439,13 @@ background-color: #fff
 
 <center>
 <img src="images/box_plot.png" width=700>
+</center>
+
+---
+
+class: center, middle
+background-color: #fff
+
+<center>
+<img src="images/diffusion.png" width=800>
 </center>
