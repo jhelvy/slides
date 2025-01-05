@@ -175,9 +175,8 @@ class: inverse, middle, center
 ---
 
 class: center, middle
-background-color: #fff
 
-.leftcol60[
+.leftcol70[
 
 <center>
 <img src="images/zev_plot.png" width=100%>
@@ -185,22 +184,21 @@ background-color: #fff
 
 ]
 
-.rightcol40[
+.rightcol30[
 
-## Nationally, ~1 in 3 dealers carried<br>a BEV in 2021
+## **~1 in 3** dealers carried a BEV in 2021 (nationally)
 
 <br>
 
-## Up from<br>~1 in 10 in 2016
+## Up from<br>**~1 in 10** in 2016
 
 ]
 
 ---
 
 class: center, middle
-background-color: #fff
 
-## Growth in BEVs at **new** car dealers is faster than **used**
+## **New** BEV availability growing faster than **Used**
 
 <center>
 <img src="images/zev_plot_new_used.png" width=950>
@@ -216,7 +214,7 @@ class: inverse, middle, center
 
 background-color: #fff
 
-## PEV “access burden”: additional travel time to see a BEV
+## “Access burden”: additional travel time to see a BEV
 
 .leftcol[
 
@@ -243,24 +241,10 @@ background-color: #fff
 ---
 
 class: center
-background-color: #fff
+background-image: url('images/travel_burden_map.png')
+background-size: contain
 
-## PEV Access Burden
-
-<center>
-<img src="images/travel_burden_map.png" width=100%>
-</center>
-
----
-
-class: center
-background-color: #fff
-
-### Access burden is shrinking in magnitude and spatial variation
-
-<center>
-<img src="images/box_plot.png" width=700>
-</center>
+### BEV access burden has improved over time, but large gaps remain
 
 ---
 
@@ -396,3 +380,20 @@ jhelvy.com `r fa(name = "link", fill = "white")`<br>
 jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
 
 ]]]
+
+---
+
+class: inverse, middle, center
+
+# Extra slides
+
+---
+
+class: center
+background-color: #fff
+
+### Access burden is shrinking in magnitude and spatial variation
+
+<center>
+<img src="images/box_plot.png" width=700>
+</center>
