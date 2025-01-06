@@ -278,7 +278,24 @@ background-size: contain
 ---
 
 class: center, middle
-background-color: #fff
+
+.leftcol70[
+
+<center>
+<img src="images/median_year.png" width=100%>
+</center>
+
+]
+
+.rightcol30[
+
+### Nationally, BEV travel burden is declining, though large variation exists.
+
+]
+
+---
+
+class: center, middle
 
 .leftcol70[
 
