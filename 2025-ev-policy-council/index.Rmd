@@ -146,7 +146,13 @@ summary_dt %>%
 
 ---
 
-# .center[Availability]
+class: middle 
+
+# .center[How accessible are BEVs?]
+ 
+--
+
+## .center[Availability]
 
 .font120[
 
@@ -158,7 +164,9 @@ summary_dt %>%
  
 <br>
 
-# .center[Affordability]
+--
+
+## .center[Affordability]
 
 .font120[
 
