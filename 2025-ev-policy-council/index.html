@@ -306,19 +306,87 @@ class: center
 
 ---
 
-class: center
+## .center[What is the median BEV (car) price premium over CVs?]
 
-# Price to income histograms
+&lt;br&gt;
+
+.font120[
+
+For each census tract:
+
+- Obtain all BEV &amp; CV car listings in a 2-hour isochrone.
+- Compute median prices for each: `\(p_{\mathrm{BEV}}\)` &amp; `\(p_{\mathrm{CV}}\)`
+- Compute median premium as difference: `\(p_{premium} = p_{\mathrm{BEV}} - p_{\mathrm{CV}}\)`
+- Divide `\(p_{premium}\)` by median annual income of census tract
+
+]
+
+---
+
+class: center, middle
+
+.leftcol65[
 
 &lt;center&gt;
-&lt;img src="images/" width=100%&gt;
+&lt;img src="images/ev_burden_plot_national.png" width=100%&gt;
 &lt;/center&gt;
+
+]
+
+.rightcol35[
+
+## Median BEV price premium is 25% of annual income
+
+]
+
+---
+
+class: center
+
+.leftcol60[
+
+&lt;center&gt;
+&lt;img src="images/ev_burden_plot.png" width=100%&gt;
+&lt;/center&gt;
+
+]
+
+.rightcol40[
+
+## BEV price premium is much higher for disadvantaged communities &lt;br&gt;(median of 40% of annual income)
+
+]
 
 ---
 
 class: inverse, middle, center
 
-# How many people are eligible for the used PEV subsidy?
+# How many people are eligible&lt;br&gt;for the used PEV subsidy?
+
+---
+
+# This is a hypothetical calculation
+
+.font120[
+
+- Used BEV subsidy was not available until 2024
+
+]
+
+--
+
+# Some assumptions
+
+.font120[
+
+- We use all BEV listings from 2016 to 2021 (inclusive). 
+- We filter for only BEVs 2 years of age (current policy)
+- For each census tract, we count the population as "eligible" if:
+
+    1. The median income is &lt;= the income cap.
+    2. The median used BEV price is &lt;= price cap.
+
+]
 
 ---
 
