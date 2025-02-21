@@ -1,5 +1,5 @@
 ---
-title: "The U.S.-China Clean Energy Race:<br>Reflections on the Inflation Reduction Act<br>and Future Direction"
+title: "U.S.-China Clean Energy Relationship:<br>Reflections on the Inflation Reduction Act<br>and Future Direction"
 author: "John Paul Helveston"
 date: February 21, 2025
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
@@ -158,7 +158,7 @@ class: inverse
 
 --
 
-## To what extent are counter-China policies helping or harming achieve this clean tech manufacturing goal?
+## To what extent are counter-China policies helping or harming the clean tech manufacturing goal?
 
 ---
 
@@ -178,29 +178,14 @@ class: inverse, middle, center
 
 ### Average cost of production in China: $0.10 / W
 
-<br>
-
 --
 
 ### **Risk**: U.S. producers may not be globally competitive
 
-<br>
+Sources:
 
-Source: https://www.nrel.gov/docs/fy24osti/91209.pdf
-
----
-
-# We need diversification
-
-## China has enough solar PV capacity to meet annual global demand through 2032.
-
-Source: Wood Mackenzie, https://www.reuters.com/world/china/china-will-dominate-solar-supply-chain-years-wood-mackenzie-2023-11-07/
-
---
-
-<br>
-
-## But do we need _onshoring_?
+- https://www.nrel.gov/docs/fy24osti/91209.pdf
+- Michael Davidson, “U.S.-China Clean Energy Race: Accelerating Innovation, Manufacturing and Adoption”, https://web.sas.upenn.edu/future-of-us-china-relations/climate-and-environment/
 
 ---
 
@@ -225,6 +210,20 @@ background-color: #fff
 .footer[https://irecusa.org/census-solar-job-trends/]
 
 ]
+
+---
+
+# We need diversification
+
+## China has enough solar PV capacity to meet annual global demand through 2032.
+
+Source: Wood Mackenzie, https://www.reuters.com/world/china/china-will-dominate-solar-supply-chain-years-wood-mackenzie-2023-11-07/
+
+--
+
+<br>
+
+## But do we need _onshoring_?
 
 ---
 
@@ -269,20 +268,77 @@ background-color: #fff
 
 ---
 
+.leftcol75[
+
+<center>
+<img src="images/covid.png" width=100%>
+</center>
+
+.font60[Source: Roberson, Laura A., *Pantha, S., & Helveston, J.P. (2024) “Battery-Powered Bargains? Assessing Electric Vehicle Resale Value in the United States” Environmental Research Letters.]
+
+]
+
+.rightcol25[
+
+### .center[Used market is more affordable, but post-COVID prices are up in all markets, not just EVs]
+
+]
+
+---
+
 # Things that don't help affordability:
 
 <br>
 
+--
+
 ## 100% tariff on imported Chinese EVs 
+
+--
 
 ## Effectively banning the use of Chinese suppliers (inc. raw materials) in US EVs
 
-## 
+--
+
+## Inflation
 
 ---
 
 ## Chinese FDI into U.S.
 
-- ## JA Solar is investing in a solar plant in Arizona
-- ## Hounen Solar invested $33 million in South Carolina; proposed facility in Ohio.
+### **Gotion batteries**: Multi-billion dollar investments in Illinois and Michigan
 
+### Challenge: Uncertainty around Foreign Entities of Concern (FEOC) status
+
+--
+
+<br>
+
+## Technology Licensing Agreements
+
+### **Ford-CATL**: Licensing battery technology in a Michigan plant
+
+### Challenge: CATL was recently added to DOD's list of “Chinese military companies”
+
+---
+
+class: inverse 
+background-image: url("images/blue.jpg")
+background-size: cover
+
+<br>
+
+# Thanks!
+
+<br>
+
+### slides.jhelvy.com/2025-princeton-industrial-policy
+
+.footer-large[.white[.right[
+
+@jhelvy.bsky.social `r fa(name = "bluesky", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+
+]]]
