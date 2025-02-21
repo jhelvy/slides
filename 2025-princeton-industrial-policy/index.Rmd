@@ -314,6 +314,17 @@ background-color: #fff
 
 ---
 
+class: center
+background-color: #fff
+
+# There are still affordable EV deserts
+
+<center>
+<img src="images/burden_map_25k.png" width=100%>
+</center>
+
+---
+
 # Things that don't help affordability:
 
 <br>
