@@ -174,11 +174,39 @@ class: inverse, middle, center
 
 ### Average U.S. module price (Q1 2024): $0.33 / W
 
---
+<br><br><br><br>
+
+Sources:
+
+- https://www.nrel.gov/docs/fy24osti/91209.pdf
+- Michael Davidson, “U.S.-China Clean Energy Race: Accelerating Innovation, Manufacturing and Adoption”, https://web.sas.upenn.edu/future-of-us-china-relations/climate-and-environment/
+
+---
+
+## Solar PV
+
+### Total available U.S. federal subsidies: $0.16 / W
+
+### Average U.S. module price (Q1 2024): $0.33 / W
+
+### Average cost of production in China: **$0.10 / W**
+
+<br><br>
+
+Sources:
+
+- https://www.nrel.gov/docs/fy24osti/91209.pdf
+- Michael Davidson, “U.S.-China Clean Energy Race: Accelerating Innovation, Manufacturing and Adoption”, https://web.sas.upenn.edu/future-of-us-china-relations/climate-and-environment/
+
+---
+
+## Solar PV
+
+### Total available U.S. federal subsidies: $0.16 / W
+
+### Average U.S. module price (Q1 2024): $0.33 / W
 
 ### Average cost of production in China: $0.10 / W
-
---
 
 ### **Risk**: U.S. producers may not be globally competitive
 
@@ -319,6 +347,12 @@ background-color: #fff
 ### **Ford-CATL**: Licensing battery technology in a Michigan plant
 
 ### Challenge: CATL was recently added to DOD's list of “Chinese military companies”
+
+---
+
+class: middle, center, inverse
+
+# The biggest competitor to an EV<br>is not a Chinese EV,<br>it's gas cars
 
 ---
 
