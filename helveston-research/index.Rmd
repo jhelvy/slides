@@ -74,7 +74,7 @@ layout: true
 
 <div class="footer-small">
 <span>
-<a href="#background">Background</a> | <a href="#choose">Conjoint Studies</a> | <a href="#packages">Software</a> | <a href="#cars">Listings Project</a>
+<a href="#background">Background</a> | <a href="#choose">Conjoint Studies</a> | <a href="#packages">Software</a> | <a href="#cars">Vehicle Listings Project</a>
 </span>
 </div>
 
@@ -83,15 +83,19 @@ layout: true
 class: middle, inverse
 
 .leftcol40[
+
 <center>
 <img src="images/topics.png" width=100%>
 </center>
+
 ]
 
 .rightcol60[
+
 ### `r fontawesome::fa(name = "user", fill = "white")` `r rmarkdown::metadata$author`
+
 ### `r fontawesome::fa(name = "university", fill = "white")` `r rmarkdown::metadata$institute`
-### `r fontawesome::fa(name = "calendar-alt", fill = "white")` `r rmarkdown::metadata$date`
+
 ]
 
 ---
@@ -279,6 +283,7 @@ class: middle, inverse, center
 ## [.yellow[Multi-modal Trips]](#modes)
 ## [.green[Autonomous Vehicles]](#av)
 ## [.blue[Electric Vehicle Incentives]](#incentive)
+## [.purple[Electric Vehicle Smart Charging Programs]](#charging)
 
 ---
 
@@ -288,7 +293,7 @@ class: inverse
 ## Will subsidies drive electric vehicle adoption? Measuring consumer preferences in the U.S. and China
 
 .leftcol[
-Helveston, John P., CMU
+Helveston, John P., George Washington University
 
 Yimin Liu, Ford
 
@@ -422,6 +427,7 @@ Saurav Pantha, MS Alumni & Visiting Scholar, EMSE
 ---
 
 class: center 
+background-color: #fff
 
 .leftcol[
 ## Value of time
@@ -440,6 +446,7 @@ class: center
 ---
 
 class: center 
+background-color: #fff
 
 <br>
 
@@ -620,6 +627,45 @@ class: middle, center, inverse
 
 ---
 
+name: charging
+class: inverse
+
+## Grid-Integration of Electric Vehicles:<br>Consumer Preferences for Supplier Managed Charging and Vehicle-to-Grid Programs
+
+.leftcol[
+
+Pingfan Hu, GWU
+
+Brian Tarroja, UC Irvine
+
+Matthew Dean, UC Irvine
+
+Kate Forrest, UC Irvine
+
+Eric Hittinger, RIT 
+
+Alan Jenn, UC Davis
+
+John Paul Helveston, GWU
+
+]
+
+.rightcol[
+
+_Under Review_
+
+]
+
+---
+
+class: middle, center, inverse
+
+# [.green[Return to choices]](#choose)
+
+# [.red[Skip to end]](#packages)
+
+---
+
 name: packages
 
 .leftcol[
@@ -652,6 +698,34 @@ Tools for designing choice based conjoint (cbc) survey experiments and conductio
 
 ---
 
+background-color: #fff
+
+.leftcol35[
+
+# `surveydown`
+
+**surveydown** is an open-source, markdown-based platform for
+interactive and reproducible Surveys using
+[R](https://www.r-project.org/), [Quarto](https://quarto.org/),
+[Shiny](https://shiny.posit.co/), and PostgreSQL databases like
+[Supabase](https://supabase.com/).
+
+[https://surveydown.org/](https://surveydown.org/)
+
+]
+
+.rightcol65[
+
+<br><br>
+
+<center>
+<img src="images/architecture.png" width=100%>
+</center>
+
+]
+
+---
+
 name: cars
 class: middle, inverse 
 
@@ -667,37 +741,37 @@ class: middle, inverse
 
 .rightcol[
 
-- New and used cars from 2015-2019
-- ~55,000 dealerships
+- New and used cars from 2016-2021
+- ~60,000 dealerships
 
 Powertrain | Listings 
 -----------|-----------
-Gasoline   | 22,769,637
-Hybrid | 749,460
-Battery Electric (BEV) | 87,852
-Plug-In Hybrid (PHEV) | 112,222
+Gasoline   | 39,118,862
+Hybrid     | 1,121,846
+Battery Electric (BEV) | 349,506
+Plug-In Hybrid (PHEV) | 181,461
 
 ]
 
 ---
 
-# .center[Estimating residual value of EVs]
-
-.leftcol30[
-
-John P. Helveston, Assistant Professor, EMSE
-
-Laura Roberson, Ph.D. Student, EMSE
-
-]
-
-.rightcol70[
+## .center[EV owners drive less than gasoline car owners]
 
 <center>
-<img src="images/cars-depreciation.png" width=600>
+<img src="images/cars-mileage.png" width=1000>
 </center>
 
-]
+Zhao, L., Ottinger, E., Yip, A., & Helveston, J.P. (2023) “Quantifying electric vehicle mileage in the United States” _Joule_. 7, 1–15. DOI: [10.1016/j.joule.2023.09.015](https://doi.org/10.1016/j.joule.2023.09.015)
+
+---
+
+# .center[Estimating residual value of EVs]
+
+<center>
+<img src="images/cars-depreciation.png" width=100%>
+</center>
+
+Roberson, Laura A., Pantha, S., & Helveston, J.P. (2024) “Battery-Powered Bargains? Assessing Electric Vehicle Resale Value in the United States” _Environmental Research Letters_. DOI: [10.1088/1748-9326/ad3fce](https://doi.org/10.1088/1748-9326/ad3fce)
 
 ---
 
@@ -706,8 +780,6 @@ Laura Roberson, Ph.D. Student, EMSE
 .leftcol30[
 
 John P. Helveston, Assistant Professor, EMSE
-
-Kazi Asifa, Undergraduate Student, EMSE
 
 2019 study be Sierra Club found that 74% of dealerships are not selling EVs
 
@@ -727,19 +799,6 @@ Kazi Asifa, Undergraduate Student, EMSE
 
 <center>
 <img src="images/cars-zev-heatmap.png" width=680>
-</center>
-
----
-
-background-color: #fff
-
-## .center[Do EV owners drive as much as gasoline car owners?]
-
-John P. Helveston, Assistant Professor, EMSE<br>
-Eliese Ottinger, Undergraduate Student, EMSE
-
-<center>
-<img src="images/cars-mileage.png" width=1000>
 </center>
 
 ---
