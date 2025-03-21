@@ -83,17 +83,21 @@ class: inverse, middle
 # Healthier ❤️ & Happier 😄 Hands 🙌
 
 .leftcol70[
+
 ## Software and Hardware Solutions for More Ergonomic Typing
 
 ### by John Paul Helveston
 
 ### 2025 OSCON @ GWU
+
 ]
 
 .rightcol30[
+
 <br><center>
 <img src="images/user-logo-color.png">
 </center>
+
 ]
 
 ???
@@ -130,30 +134,13 @@ and suggestions to take better care of your hands while typing.
 class: center
 background-color: #fff
 
-.leftcol[
-
-# Practice Typing
+# **Tip #1**: Practice Touch Typing
 
 ## https://www.keybr.com/
 
 <center>
-<img src="images/qwerty.png" width=100%>
+<img src="images/qwerty.png" width=700>
 </center>
-
-
-]
-
-.rightcol[
-
-# Master keyboard shortcuts
-
-<br>
-
-## Insert `%>%` with:
-
-## `ctrl/cmd` + `shift` + `M`
-
-]
 
 ???
 
@@ -171,25 +158,12 @@ time to work on your typing, most people can benefit from it.
 
 class: center
 
-# Use a text expander like _espanso_
+# **Tip #2:** Use a text expander like _espanso_
 
-<br>
-
-.leftcol[
 <center>
-<img src="images/ggplot.gif" width=100%>
+<img src="images/personal.gif" width=800>
 </center>
-]
 
-.rightcol[
-<center>
-<img src="images/rrsetup.gif" width=650>
-</center>
-]
-
-<center>
-Powered by <img src="images/espanso.svg" width=100>
-<br>
 See my post on espanso at <a href="https://www.jhelvy.com/blog">https://www.jhelvy.com/blog</a>
 </center>
 
@@ -215,9 +189,10 @@ my blog post about it on my website at jhelvy.com.
 
 class: center
 
-# Use custom keyboard layers
+# **Tip #3:** Use custom keyboard layers
 
 .cols3[
+
 ## .center[**Base layer**]
 
 <center>
@@ -231,16 +206,20 @@ asdfgjhkl'
 zxcvnm,./
 </p>
 </center>
+
 ]
 
 .cols3[
+
 <br>
 <center>
 <img src="images/shift_key.png" width=100%>
 </center>
+
 ]
 
 .cols3[
+
 ## .center[**Shift layer**]
 
 <center>
@@ -254,6 +233,7 @@ ASDFGHJKL"
 ZXCVBNM<>?
 </p>
 </center>
+
 ]
 
 ???
@@ -267,7 +247,9 @@ and another layer of symbols and upper case letters when you hold "shift".
 ---
 
 background-color: #fff
-class: middle
+class: middle, center
+
+# **Tip #3:** Use custom keyboard layers
 
 <center>
 <img src="images/keyboard_nav_layer.png" width=1000>
@@ -302,6 +284,8 @@ delete under my right hand, and cut, copy, paste under my left hand.
 
 class: center, middle
 
+# **Tip #3:** Use custom keyboard layers
+
 .leftcol[
 
 # Mac 
@@ -309,7 +293,7 @@ class: center, middle
 #### https://karabiner-elements.pqrs.org/
 
 <center>
-<img src="images/kbe.png" width=300>
+<img src="images/kbe.png" width=250>
 </center>
 
 ]
@@ -338,7 +322,7 @@ Auto-hot-key.
 background-color: #fff
 class: center
 
-# Use a split keyboard
+# **Tip #4:** Use a split keyboard
 
 <center>
 <img src="images/ergo_split_basic.jpg" width=650>
@@ -355,33 +339,22 @@ some kind of a split keyboard.
 background-color: #fff
 class: center
 
-.leftcol[
-
-# Reduce<br>**Forearm Pronation**
+# Reduce **Ulnar Deviation**
 
 <center>
-<img src="images/drake_ergo_pronation.png" width=80%>
+<img src="images/drake_ergo_ulnar.png" width=500>
 </center>
 
-]
+---
 
---
+background-color: #fff
+class: center
 
-.rightcol[
-
-# Reduce<br>**Ulnar Deviation**
+# Reduce **Forearm Pronation**
 
 <center>
-<img src="images/drake_ergo_ulnar.png" width=80%>
+<img src="images/drake_ergo_pronation.png" width=500>
 </center>
-
-]
-
-???
-
-And most split keyboards also add a small tenting angle 
-
-to reduce forearm pronation.
 
 ---
 
@@ -441,7 +414,7 @@ wrists, and shoulders.
 
 class: center
 
-# Build Your Own Keyboard for Less!
+# Build Your Keyboard With Open Source Tools!
 
 <center>
 <img src="images/iris.png" width=720>
@@ -484,26 +457,31 @@ like custom layers, directly into the keyboard itself.
 
 class: inverse
 
-.leftcol75[
+.leftcol70[
+
 My Iris Keyboard:<img src="images/my_iris.jpg" width=400>
 
-### Slides:<br>https://github.com/jhelvy/slides/2025-oscon-healthy-hands
+### **Tip #1**: Practice Touch Typing
 
-### My Karabiner Elements Settings:<br>https://github.com/jhelvy/jkeyboard
+### **Tip #2:** Use a text expander like _espanso_
 
-### My Iris Keyboard:<br>https://github.com/jhelvy/iris-rev2
+### **Tip #3:** Use custom keyboard layers
+
+### **Tip #4:** Use a split keyboard
+
 ]
 
-.rightcol25[.right[
+.rightcol30[.right[
+
 # .center[.font150[Thanks!]]
 
 # .center[❤️ 😄 🙌]
-<br><br><br><br><br>
-@JohnHelveston `r fa(name = "twitter", fill = "white")`<br>
+<br><br><br>
+@jhelvy.bsky.social `r fa(name = "bluesky", fill = "white")`<br>
 @jhelvy `r fa(name = "github", fill = "white")`<br>
-@jhelvy `r fa(name = "weixin", fill = "white")`<br>
 jhelvy.com `r fa(name = "link", fill = "white")`<br>
-jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`<br>
+https://slides.jhelvy.com/
 ]]
 
 ???
