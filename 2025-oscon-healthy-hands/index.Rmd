@@ -95,7 +95,7 @@ class: inverse, middle
 .rightcol30[
 
 <br><center>
-<img src="images/user-logo-color.png">
+<img src="images/OSCON.png" width=100%>
 </center>
 
 ]
