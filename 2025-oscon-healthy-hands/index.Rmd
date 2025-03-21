@@ -1,0 +1,517 @@
+---
+title: "Healthier & Happier Hands: Software and Hardware Solutions for More Ergonomic Typing"
+author: "John Paul Helveston"
+date: Mar 24, 2025
+institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+    lib_dir: libs
+    nature: 
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(fontawesome)
+library(tidyverse)
+library(metathis)
+library(logitr)
+
+options(
+  htmltools.dir.version = FALSE,
+  knitr.table.format = "html",
+  knitr.kable.NA = '',
+  dplyr.width = Inf,
+  width = 250
+)
+
+knitr::opts_chunk$set(
+  cache = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.path = "figs/",
+  fig.width = 7.252,
+  fig.height = 4,
+  comment = "#>",
+  fig.retina = 3
+)
+
+# Setup xaringanExtra options
+xaringanExtra::use_xaringan_extra(c(
+  "tile_view", "panelset", "share_again"))
+xaringanExtra::style_share_again(share_buttons = "none")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+xaringanExtra::use_broadcast()
+xaringanExtra::use_freezeframe(responsive = FALSE)
+
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    comment = "#>",
+    fig.path = "figs/",
+    fig.retina = 3 # Better figure resolution
+)
+```
+
+layout: true
+
+<!-- this adds the link footer to all slides, depends on my-footer class in css-->
+
+<div class="footer-small">
+<span>
+https://github.com/jhelvy/slides/2025-oscon-healthy-hands
+</span>
+</div>
+
+---
+
+name: title-slide
+class: inverse, middle
+
+# Healthier ❤️ & Happier 😄 Hands 🙌
+
+.leftcol70[
+## Software and Hardware Solutions for More Ergonomic Typing
+
+### by John Paul Helveston
+
+### 2025 OSCON @ GWU
+]
+
+.rightcol30[
+<br><center>
+<img src="images/user-logo-color.png">
+</center>
+]
+
+???
+
+Hi everyone, my name is John Paul Helveston and I want to talk
+
+about solutions to keep our hands happy and healthy
+
+---
+
+class: center
+background-color: #fff
+
+## **I type ~7 million key strokes per year**
+
+<center>
+<img src="images/monthlyKeys.png" width=700>
+</center>
+
+???
+
+In 2020 I typed 7.5 million key strokes, and if you're a
+
+regular R user like me, chances are you too are racking up
+
+some serious mileage on your keyboard, which can lead to pain
+
+and serious injury. So today I want to talk about some tools
+
+and suggestions to take better care of your hands while typing.
+
+---
+
+class: center
+background-color: #fff
+
+.leftcol[
+
+# Practice Typing
+
+## https://www.keybr.com/
+
+<center>
+<img src="images/qwerty.png" width=100%>
+</center>
+
+
+]
+
+.rightcol[
+
+# Master keyboard shortcuts
+
+<br>
+
+## Insert `%>%` with:
+
+## `ctrl/cmd` + `shift` + `M`
+
+]
+
+???
+
+My first suggestion is simply to practice your typing.
+
+I thought I had pretty good typing skills, but I found I was
+
+able to increase my speed and accuracy by about 20% with just
+
+two months of daily practice on on key-br-dot-com. So, take some
+
+time to work on your typing, most people can benefit from it.
+
+---
+
+class: center
+
+# Use a text expander like _espanso_
+
+<br>
+
+.leftcol[
+<center>
+<img src="images/ggplot.gif" width=100%>
+</center>
+]
+
+.rightcol[
+<center>
+<img src="images/rrsetup.gif" width=650>
+</center>
+]
+
+<center>
+Powered by <img src="images/espanso.svg" width=100>
+<br>
+See my post on espanso at <a href="https://www.jhelvy.com/blog">https://www.jhelvy.com/blog</a>
+</center>
+
+???
+
+You can also create your own shortcuts by using a text expander,
+
+which are programs that convert keywords into text snippets.
+
+In the example on the left, I'm using some custom expansions to
+
+write some ggplot code for a scatterplot. And on the right, I'm
+
+using a single keyword to generate a code chunk that I use in most
+
+of my RMarkdown files. My favorite expander is an open source one
+
+called espanso, if you want to learn more at it, you can check out
+
+my blog post about it on my website at jhelvy.com.
+
+---
+
+class: center
+
+# Use custom keyboard layers
+
+.cols3[
+## .center[**Base layer**]
+
+<center>
+<p style="font-size:40px;">
+1234567890
+<br>
+qwertyuiop
+<br>
+asdfgjhkl'
+<br>
+zxcvnm,./
+</p>
+</center>
+]
+
+.cols3[
+<br>
+<center>
+<img src="images/shift_key.png" width=100%>
+</center>
+]
+
+.cols3[
+## .center[**Shift layer**]
+
+<center>
+<p style="font-size:40px;">
+!@#$%^&*()
+<br>
+QWERTYUIOP
+<br>
+ASDFGHJKL"
+<br>
+ZXCVBNM<>?
+</p>
+</center>
+]
+
+???
+
+Another tip is to use custom keyboard layers. Every keyboard has
+
+at least two layers: the base layer of numbers and lower case letters,
+
+and another layer of symbols and upper case letters when you hold "shift".
+
+---
+
+background-color: #fff
+class: middle
+
+<center>
+<img src="images/keyboard_nav_layer.png" width=1000>
+</center>
+
+???
+
+A nice solution is to use a custom layer to move these keys back
+
+to a more convenient location.
+
+---
+
+background-color: #fff
+class: center
+
+# Example: **Caps Lock Layer**
+
+<center>
+<img src="images/keyboard_remap.png" width=1100>
+</center>
+
+???
+
+For example, on my keyboard, I re-mapped my caps lock key to
+
+trigger a new layer that has the navigation arrows and forward and back
+
+delete under my right hand, and cut, copy, paste under my left hand.
+
+---
+
+class: center, middle
+
+.leftcol[
+
+# Mac 
+
+#### https://karabiner-elements.pqrs.org/
+
+<center>
+<img src="images/kbe.png" width=300>
+</center>
+
+]
+
+.rightcol[
+
+# Windows 
+
+#### https://www.autohotkey.com/
+
+<center>
+<img src="images/ahk_logo_no_text.svg" width=500>
+</center>
+]
+
+???
+
+I implemented this using a program called Karabiner Elements, which is
+
+for mac only, but on Windows most people use a similar program called
+
+Auto-hot-key.
+
+---
+
+background-color: #fff
+class: center
+
+# Use a split keyboard
+
+<center>
+<img src="images/ergo_split_basic.jpg" width=650>
+</center>
+
+???
+
+In addition to all these software tools, I highly recommend using
+
+some kind of a split keyboard.
+
+---
+
+background-color: #fff
+class: center
+
+.leftcol[
+
+# Reduce<br>**Forearm Pronation**
+
+<center>
+<img src="images/drake_ergo_pronation.png" width=80%>
+</center>
+
+]
+
+--
+
+.rightcol[
+
+# Reduce<br>**Ulnar Deviation**
+
+<center>
+<img src="images/drake_ergo_ulnar.png" width=80%>
+</center>
+
+]
+
+???
+
+And most split keyboards also add a small tenting angle 
+
+to reduce forearm pronation.
+
+---
+
+background-color: #fff
+class: center, middle
+
+# Think of your keyboard as a medical device
+
+<br>
+
+.cols3[
+
+<center>
+<img src="images/kinesis_freestyle2.jpg" width=300>
+<br>
+KINESIS Freestyle 2<br><b>$89.00</b>
+</center>
+
+]
+
+.cols3[
+
+<center>
+<img src="images/logitech.jpg" width=280>
+<br>
+Logitech - ERGO K860<br><b>$129.00</b>
+</center>
+
+]
+
+.cols3[
+
+<center>
+<img src="images/glasses.jpg" width=350>
+Average cost of glasses<br><b>$242.00</b>
+</center>
+
+]
+
+???
+
+Now one of the downsides to split keyboards is that they can be more
+
+expensive, though there are plenty of great options for around $100.
+
+But I encourage to consider your keyboard as a medical device, like a
+
+pair of glasses, which can easily cost over $100. Without glasses,
+
+I couldn't read my own code, but without a keyboard I couldn't type it.
+
+Investing in a good keyboard is an investment in the health of your hands,
+
+wrists, and shoulders.
+
+---
+
+class: center
+
+# Build Your Own Keyboard for Less!
+
+<center>
+<img src="images/iris.png" width=720>
+<br>
+Iris (~$200.00), Powered by <a href="https://qmk.fm/">QMK Firmware</a>
+</center>
+
+???
+
+The Ergodox in particular is rather expensive, but if you're feeling ambitious
+
+you can build your own for a lot less. There's actually a pretty big community
+
+of keyboard hobbiest, and building your own keyboard these days is actually
+
+rather straightforward. Keyboards like the Iris shown here can be snapped
+
+together like a set of legos.
+
+---
+
+background-color: #fff
+class: center
+
+# Use a split keyboard **_that is programmable_**
+
+<center>
+<img src="images/ergodox_layout.png" width=670>
+</center>
+
+???
+
+Finally, if you are going to invest in a good keyboard, get one that is fully
+
+programmable. This enables you to implement many of the solutions I mentioned,
+
+like custom layers, directly into the keyboard itself.
+
+---
+
+class: inverse
+
+.leftcol75[
+My Iris Keyboard:<img src="images/my_iris.jpg" width=400>
+
+### Slides:<br>https://github.com/jhelvy/slides/2025-oscon-healthy-hands
+
+### My Karabiner Elements Settings:<br>https://github.com/jhelvy/jkeyboard
+
+### My Iris Keyboard:<br>https://github.com/jhelvy/iris-rev2
+]
+
+.rightcol25[.right[
+# .center[.font150[Thanks!]]
+
+# .center[❤️ 😄 🙌]
+<br><br><br><br><br>
+@JohnHelveston `r fa(name = "twitter", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+@jhelvy `r fa(name = "weixin", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+]]
+
+???
+
+Okay, that's all I have. Thanks for listening and I look forward 
+
+to any comments or questions you might have. If you want to learn 
+
+more about anything I mentioned, here are some links, and feel free
+
+to reach out to me directly on Twitter or by email. 
