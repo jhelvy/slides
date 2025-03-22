@@ -100,12 +100,6 @@ class: inverse, middle
 
 ]
 
-???
-
-Hi everyone, my name is John Paul Helveston and I want to talk
-
-about solutions to keep our hands happy and healthy
-
 ---
 
 class: center
@@ -114,20 +108,8 @@ background-color: #fff
 ## **I type ~7 million key strokes per year**
 
 <center>
-<img src="images/monthlyKeys.png" width=700>
+<img src="images/monthlyKeys.png" width=800>
 </center>
-
-???
-
-In 2020 I typed 7.5 million key strokes, and if you're a
-
-regular R user like me, chances are you too are racking up
-
-some serious mileage on your keyboard, which can lead to pain
-
-and serious injury. So today I want to talk about some tools
-
-and suggestions to take better care of your hands while typing.
 
 ---
 
@@ -142,18 +124,6 @@ background-color: #fff
 <img src="images/qwerty.png" width=700>
 </center>
 
-???
-
-My first suggestion is simply to practice your typing.
-
-I thought I had pretty good typing skills, but I found I was
-
-able to increase my speed and accuracy by about 20% with just
-
-two months of daily practice on on key-br-dot-com. So, take some
-
-time to work on your typing, most people can benefit from it.
-
 ---
 
 class: center
@@ -166,24 +136,6 @@ class: center
 
 See my post on espanso at <a href="https://www.jhelvy.com/blog">https://www.jhelvy.com/blog</a>
 </center>
-
-???
-
-You can also create your own shortcuts by using a text expander,
-
-which are programs that convert keywords into text snippets.
-
-In the example on the left, I'm using some custom expansions to
-
-write some ggplot code for a scatterplot. And on the right, I'm
-
-using a single keyword to generate a code chunk that I use in most
-
-of my RMarkdown files. My favorite expander is an open source one
-
-called espanso, if you want to learn more at it, you can check out
-
-my blog post about it on my website at jhelvy.com.
 
 ---
 
@@ -236,14 +188,6 @@ ZXCVBNM<>?
 
 ]
 
-???
-
-Another tip is to use custom keyboard layers. Every keyboard has
-
-at least two layers: the base layer of numbers and lower case letters,
-
-and another layer of symbols and upper case letters when you hold "shift".
-
 ---
 
 background-color: #fff
@@ -255,12 +199,6 @@ class: middle, center
 <img src="images/keyboard_nav_layer.png" width=1000>
 </center>
 
-???
-
-A nice solution is to use a custom layer to move these keys back
-
-to a more convenient location.
-
 ---
 
 background-color: #fff
@@ -271,14 +209,6 @@ class: center
 <center>
 <img src="images/keyboard_remap.png" width=1100>
 </center>
-
-???
-
-For example, on my keyboard, I re-mapped my caps lock key to
-
-trigger a new layer that has the navigation arrows and forward and back
-
-delete under my right hand, and cut, copy, paste under my left hand.
 
 ---
 
@@ -293,7 +223,7 @@ class: center, middle
 #### https://karabiner-elements.pqrs.org/
 
 <center>
-<img src="images/kbe.png" width=250>
+<img src="images/kbe.png" width=200>
 </center>
 
 ]
@@ -309,14 +239,6 @@ class: center, middle
 </center>
 ]
 
-???
-
-I implemented this using a program called Karabiner Elements, which is
-
-for mac only, but on Windows most people use a similar program called
-
-Auto-hot-key.
-
 ---
 
 background-color: #fff
@@ -327,12 +249,6 @@ class: center
 <center>
 <img src="images/ergo_split_basic.jpg" width=650>
 </center>
-
-???
-
-In addition to all these software tools, I highly recommend using
-
-some kind of a split keyboard.
 
 ---
 
@@ -394,22 +310,6 @@ Average cost of glasses<br><b>$242.00</b>
 
 ]
 
-???
-
-Now one of the downsides to split keyboards is that they can be more
-
-expensive, though there are plenty of great options for around $100.
-
-But I encourage to consider your keyboard as a medical device, like a
-
-pair of glasses, which can easily cost over $100. Without glasses,
-
-I couldn't read my own code, but without a keyboard I couldn't type it.
-
-Investing in a good keyboard is an investment in the health of your hands,
-
-wrists, and shoulders.
-
 ---
 
 class: center
@@ -422,18 +322,6 @@ class: center
 Iris (~$200.00), Powered by <a href="https://qmk.fm/">QMK Firmware</a>
 </center>
 
-???
-
-The Ergodox in particular is rather expensive, but if you're feeling ambitious
-
-you can build your own for a lot less. There's actually a pretty big community
-
-of keyboard hobbiest, and building your own keyboard these days is actually
-
-rather straightforward. Keyboards like the Iris shown here can be snapped
-
-together like a set of legos.
-
 ---
 
 background-color: #fff
@@ -442,24 +330,16 @@ class: center
 # Use a split keyboard **_that is programmable_**
 
 <center>
-<img src="images/ergodox_layout.png" width=670>
+<img src="images/ergodox_layout.png" width=600>
 </center>
 
-???
-
-Finally, if you are going to invest in a good keyboard, get one that is fully
-
-programmable. This enables you to implement many of the solutions I mentioned,
-
-like custom layers, directly into the keyboard itself.
+[r/ErgoMechKeyboards](https://www.reddit.com/r/ErgoMechKeyboards/)
 
 ---
 
 class: inverse
 
 .leftcol70[
-
-My Iris Keyboard:<img src="images/my_iris.jpg" width=400>
 
 ### **Tip #1**: Practice Touch Typing
 
@@ -468,6 +348,8 @@ My Iris Keyboard:<img src="images/my_iris.jpg" width=400>
 ### **Tip #3:** Use custom keyboard layers
 
 ### **Tip #4:** Use a split keyboard
+
+My Iris Keyboard:<img src="images/my_iris.jpg" width=400>
 
 ]
 
@@ -483,13 +365,3 @@ jhelvy.com `r fa(name = "link", fill = "white")`<br>
 jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`<br>
 https://slides.jhelvy.com/
 ]]
-
-???
-
-Okay, that's all I have. Thanks for listening and I look forward 
-
-to any comments or questions you might have. If you want to learn 
-
-more about anything I mentioned, here are some links, and feel free
-
-to reach out to me directly on Twitter or by email. 
