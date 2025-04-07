@@ -44,9 +44,9 @@ cv <- oica::sales_country %>%
     filter(year >= min(pev$year)) %>% 
     # Add latest data
     rbind(data.frame(
-        year = c(2022, 2023, 2024), 
-        sales = c(23563287, 26062824, 27563000), 
-        type = c('all', 'all', 'all')
+        year = c(2024), 
+        sales = c(27563000), 
+        type = c('all')
     ))
 annualSales <- rbind(pev, cv) %>%
     pivot_wider(names_from = type, values_from = sales) %>%
@@ -276,7 +276,8 @@ ggplot(production_data, aes(x = year, y = percentage, fill = region)) +
 # production line plot ----
 
 # Get vehicle production data
-data <- production
+data <- production %>% 
+    filter(year <= 2022)
 
 # Prepare data for line plot showing China, USA, and Europe
 production_data <- data %>%

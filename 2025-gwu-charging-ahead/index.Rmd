@@ -82,70 +82,11 @@ class: inverse
 
 class: center
 
-## Chinese firms dominate the global EV industry
-
-
-<center>
-<img src="images/global-ev-sales.png" width=75%>
-</center>
-
-.font60[https://www.reuters.com/business/autos-transportation/global-electric-vehicle-sales-up-25-record-2024-2025-01-14/]
-
----
-
-class: center
-
-.leftcol75[
+### China dominates global vehicle production
 
 <center>
-<img src="images/china-sales-may-24.png" width=100%>
+<img src="images/production-share.png" width=65%>
 </center>
-
-]
-
-.rightcol25[
-
-## Chinese firms dominate China's EV market
-
-]
-
-.font70[https://cleantechnica.com/2024/07/02/47-plugin-vehicle-market-share-in-china-ev-sales-report/]
-
----
-
-## .center[Chinese firms dominate the EV battery _supply chain_]
-
-<center>
-<img src="images/battery-supply-chain.png" width=100%>
-</center>
-
-Cheng, Anthony L., et al. "Electric vehicle battery chemistry affects supply chain disruption vulnerabilities." _Nature Communications_ 15.1 (2024): 2143.
-
----
-
-# .center[**Bipartisan goal**: The US needs to counter China's lead in clean energy tech]
-
-<br>
-
---
-
-## **Keep Chinese clean tech out of US market**: Steep tariffs on imported Chinese EVs, batteries
-
---
-
-## **Keep Chinese firms out of US clean tech supply chains**: IRA restrictions on EV subsidy elligiblity, unclear guidance on Foreign Entities of Concern (FEOC) rules
-
----
-
-# .center[Countering China & Investing in Manufacturing]
-
-<br>
-
-## **IRA Strategy**: Investing in *manufacturing* will lead to enduring support for clean tech through local jobs & economic benefits
-
---
-
-## To what extent are counter-China policies helping or harming the clean tech manufacturing goal?
 
 ---
 
@@ -185,22 +126,111 @@ background-color: #fff
 ---
 
 class: center
-
-### Most BEV supply growth in higher-price segments<br>.font80[(and overall supply still quite low)]
-
-<center>
-<img src="images/availability.png" width=100%>
-</center>
-
----
-
-class: center
 background-color: #fff
 
 # The US still has affordable EV deserts
 
 <center>
 <img src="images/burden_map_25k.png" width=100%>
+</center>
+
+---
+
+# Things that don't help affordability:
+
+<br>
+
+--
+
+## **Tariffs** (100% tariff on imported Chinese EVs)
+
+--
+
+## Effectively banning the use of Chinese suppliers (inc. raw materials) in US EVs
+
+--
+
+## Inflation (...see Tariffs)
+
+---
+
+class: inverse 
+background-image: url("images/blue.jpg")
+background-size: cover
+
+<br>
+
+# Thanks!
+
+<br>
+
+### slides.jhelvy.com/2025-gwu-charging-ahead
+
+.footer-large[.white[.right[
+
+@jhelvy.bsky.social `r fa(name = "bluesky", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+
+]]]
+
+---
+
+class: center, middle, inverse
+
+# Extra slides
+
+---
+
+class: center
+
+## Chinese firms dominate the global EV industry
+
+<center>
+<img src="images/global-ev-sales.png" width=75%>
+</center>
+
+.font60[https://www.reuters.com/business/autos-transportation/global-electric-vehicle-sales-up-25-record-2024-2025-01-14/]
+
+---
+
+## .center[Chinese firms dominate the EV battery _supply chain_]
+
+<center>
+<img src="images/battery-supply-chain.png" width=100%>
+</center>
+
+Cheng, Anthony L., et al. "Electric vehicle battery chemistry affects supply chain disruption vulnerabilities." _Nature Communications_ 15.1 (2024): 2143.
+
+---
+
+class: center
+
+.leftcol75[
+
+<center>
+<img src="images/china-sales-may-24.png" width=100%>
+</center>
+
+]
+
+.rightcol25[
+
+## Chinese firms dominate China's EV market
+
+]
+
+.font70[https://cleantechnica.com/2024/07/02/47-plugin-vehicle-market-share-in-china-ev-sales-report/]
+
+---
+
+class: center
+
+### Most BEV supply growth in higher-price segments<br>.font80[(and overall supply still quite low)]
+
+<center>
+<img src="images/availability.png" width=100%>
 </center>
 
 ---
@@ -223,21 +253,29 @@ background-color: #fff
 
 ---
 
-# Things that don't help affordability:
+# .center[**Bipartisan goal**: The US needs to counter China's lead in clean energy tech]
 
 <br>
 
 --
 
-## **Tariffs** (100% tariff on imported Chinese EVs)
+## **Keep Chinese clean tech out of US market**: Steep tariffs on imported Chinese EVs, batteries
 
 --
 
-## Effectively banning the use of Chinese suppliers (inc. raw materials) in US EVs
+## **Keep Chinese firms out of US clean tech supply chains**: IRA restrictions on EV subsidy elligiblity, unclear guidance on Foreign Entities of Concern (FEOC) rules
+
+---
+
+# .center[Countering China & Investing in Manufacturing]
+
+<br>
+
+## **IRA Strategy**: Investing in *manufacturing* will lead to enduring support for clean tech through local jobs & economic benefits
 
 --
 
-## Inflation (...see Tariffs)
+## To what extent are counter-China policies helping or harming the clean tech manufacturing goal?
 
 ---
 
@@ -262,26 +300,3 @@ background-color: #fff
 class: middle, center, inverse
 
 # The biggest competitor<br>to an American EV<br>is not a Chinese EV...<br><br>...it's a gas car
-
----
-
-class: inverse 
-background-image: url("images/blue.jpg")
-background-size: cover
-
-<br>
-
-# Thanks!
-
-<br>
-
-### slides.jhelvy.com/2025-gwu-charging-ahead
-
-.footer-large[.white[.right[
-
-@jhelvy.bsky.social `r fa(name = "bluesky", fill = "white")`<br>
-@jhelvy `r fa(name = "github", fill = "white")`<br>
-jhelvy.com `r fa(name = "link", fill = "white")`<br>
-jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
-
-]]]
