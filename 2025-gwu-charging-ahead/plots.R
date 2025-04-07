@@ -1,5 +1,7 @@
 library(tidyverse)
 library(cowplot)
+library(oica)
+
 options(dplyr.width = Inf)
 
 # Plot settings
@@ -214,5 +216,132 @@ chart_data %>%
 
 ggsave(
     here::here('images', 'china-sales-may-24.png'),
+    width = 8, height = 6
+)
+
+
+# production barplot ----
+
+# Get vehicle production data
+data <- production
+
+# Prepare data for stacked bar chart
+# First, create a category for Europe and group other countries
+production_data <- data %>%
+    mutate(region = case_when(
+        country == "China" ~ "China",
+        country == "USA" ~ "USA",
+        country %in% c("Germany", "France", "Italy", "Spain", "UK", "Czech Republic", 
+                       "Poland", "Slovakia", "Romania", "Hungary", "Portugal", 
+                       "Slovenia", "Austria", "Sweden", "Netherlands", "Belgium", "Finland") ~ "Europe",
+        TRUE ~ "Other"
+    )) %>%
+    group_by(year, region) %>%
+    summarize(production = sum(n, na.rm = TRUE), .groups = "drop") %>%
+    group_by(year) %>%
+    mutate(total = sum(production, na.rm = TRUE),
+           percentage = (production / total) * 100) %>%
+    ungroup()
+
+# Ensure regions are in desired order for stacking
+production_data$region <- factor(production_data$region, 
+                                 levels = c("Other", "Europe", "USA", "China"))
+
+# Create the stacked bar chart
+ggplot(production_data, aes(x = year, y = percentage, fill = region)) +
+    geom_bar(stat = "identity", position = "stack") +
+    scale_fill_manual(values = c("China" = "#E41A1C", 
+                                 "USA" = "#377EB8", 
+                                 "Europe" = "#4DAF4A", 
+                                 "Other" = "gray")) +
+    theme_minimal() +
+    labs(
+        title = "Share of Global Vehicle Production by Region",
+        subtitle = "Percentage breakdown showing China's growing dominance",
+        x = "Year",
+        y = "Percentage of Global Production (%)",
+        fill = "Region",
+        caption = "Data source: OICA (International Organization of Motor Vehicle Manufacturers)"
+    ) +
+    theme(
+        plot.title = element_text(face = "bold", size = 16),
+        axis.title = element_text(face = "bold"),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom",
+        legend.title = element_text(face = "bold")
+    ) +
+    scale_y_continuous(labels = function(x) paste0(x, "%")) +
+    guides(fill = guide_legend(reverse = TRUE))
+
+# production line plot ----
+
+# Get vehicle production data
+data <- production
+
+# Prepare data for line plot showing China, USA, and Europe
+production_data <- data %>%
+    mutate(region = case_when(
+        country == "China" ~ "China",
+        country == "USA" ~ "USA",
+        country %in% c("Germany", "France", "Italy", "Spain", "UK", "Czech Republic", 
+                       "Poland", "Slovakia", "Romania", "Hungary", "Portugal", 
+                       "Slovenia", "Austria", "Sweden", "Netherlands", "Belgium", "Finland") ~ "Europe",
+        TRUE ~ "Other"
+    )) %>%
+    group_by(year, region) %>%
+    summarize(production = sum(n, na.rm = TRUE), .groups = "drop") %>%
+    group_by(year) %>%
+    mutate(total = sum(production, na.rm = TRUE),
+           percentage = (production / total) * 100) %>%
+    ungroup() %>%
+    # Filter to only include China, USA, and Europe
+    filter(region %in% c("China", "USA", "Europe"))
+
+# Create data frame for labels at the end of each line
+label_data <- production_data %>%
+    group_by(region) %>%
+    filter(year == max(year)) %>%
+    ungroup()
+
+# Define colors for consistency
+region_colors <- c("China" = "#E41A1C", "USA" = "#377EB8", "Europe" = "#4DAF4A")
+
+# Create the line plot with direct labels and no legend
+ggplot(production_data, aes(x = year, y = percentage, color = region, group = region)) +
+    geom_line(size = 1.2) +
+    geom_point(size = 3) +
+    # Add labels at the end of each line
+    geom_text(data = label_data, 
+              aes(label = region, x = year + 0.2, color = region),
+              hjust = 0, 
+              fontface = "bold",
+              size = 4) +
+    scale_color_manual(values = region_colors) +
+    theme_minimal(base_family = font_main) +
+    labs(
+        title = "Share of Global Vehicle Production by Region",
+        subtitle = "Comparing China, USA, and Europe",
+        x = "Year",
+        y = "Percentage of Global Production (%)",
+        caption = "Data source: OICA (International Organization of Motor Vehicle Manufacturers)"
+    ) +
+    theme(
+        plot.title = element_text(face = "bold", size = 16),
+        axis.title = element_text(face = "bold"),
+        panel.grid.minor = element_blank(),
+        # Remove the legend
+        legend.position = "none",
+        panel.background = element_rect(fill = "white", color = NA),
+        plot.background = element_rect(fill = "white", color = NA)
+    ) +
+    scale_y_continuous(
+        labels = function(x) paste0(x, "%"), 
+        limits = c(0, 35)
+    ) +
+    # Expand x-axis slightly to make room for labels
+    scale_x_continuous(expand = expansion(mult = c(0.05, 0.16)))
+
+ggsave(
+    here::here('images', 'production-share.png'),
     width = 8, height = 6
 )
