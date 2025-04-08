@@ -1,5 +1,5 @@
 ---
-title: "The EV Transition in the U.S. & China:<br>Reflections on the Inflation Reduction Act<br>and Future Direction"
+title: "The EV Transition in the U.S. & China"
 author: "John Paul Helveston"
 date: April 08, 2025
 institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
@@ -80,16 +80,6 @@ class: inverse
 
 ---
 
-class: center
-
-### China dominates global vehicle production
-
-<center>
-<img src="images/production-share.png" width=65%>
-</center>
-
----
-
 background-color: #fff
 
 <center>
@@ -113,15 +103,21 @@ background-color: #fff
 class: center
 background-color: #fff
 
-## EV sector has an affordability problem (except in China)
-
-.font70[Price gap between the sales-weighted average price of BEV and ICEV, before subsidy, by size, in 2018 and 2022]
+.leftcol70[
 
 <center>
-<img src="images/ev-affordability.png" width=89%>
+<img src="images/ev-price-slope-edit.png" width=100%>
 </center>
 
-.font70[Source: IEA, https://www.iea.org/reports/global-ev-outlook-2024/executive-summary]
+.font70[Source: https://www.iea.org/reports/global-ev-outlook-2024/executive-summary]
+
+]
+
+.rightcol30[
+
+### The EV sector has an affordability problem<br>(except in China)
+
+]
 
 ---
 
@@ -174,129 +170,3 @@ jhelvy.com `r fa(name = "link", fill = "white")`<br>
 jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
 
 ]]]
-
----
-
-class: center, middle, inverse
-
-# Extra slides
-
----
-
-class: center
-
-## Chinese firms dominate the global EV industry
-
-<center>
-<img src="images/global-ev-sales.png" width=75%>
-</center>
-
-.font60[https://www.reuters.com/business/autos-transportation/global-electric-vehicle-sales-up-25-record-2024-2025-01-14/]
-
----
-
-## .center[Chinese firms dominate the EV battery _supply chain_]
-
-<center>
-<img src="images/battery-supply-chain.png" width=100%>
-</center>
-
-Cheng, Anthony L., et al. "Electric vehicle battery chemistry affects supply chain disruption vulnerabilities." _Nature Communications_ 15.1 (2024): 2143.
-
----
-
-class: center
-
-.leftcol75[
-
-<center>
-<img src="images/china-sales-may-24.png" width=100%>
-</center>
-
-]
-
-.rightcol25[
-
-## Chinese firms dominate China's EV market
-
-]
-
-.font70[https://cleantechnica.com/2024/07/02/47-plugin-vehicle-market-share-in-china-ev-sales-report/]
-
----
-
-class: center
-
-### Most BEV supply growth in higher-price segments<br>.font80[(and overall supply still quite low)]
-
-<center>
-<img src="images/availability.png" width=100%>
-</center>
-
----
-
-.leftcol75[
-
-<center>
-<img src="images/covid.png" width=100%>
-</center>
-
-.font60[Source: Roberson, Laura A., *Pantha, S., & Helveston, J.P. (2024) “Battery-Powered Bargains? Assessing Electric Vehicle Resale Value in the United States” Environmental Research Letters.]
-
-]
-
-.rightcol25[
-
-### .center[Used market is more affordable, but post-COVID prices are up in all markets, not just EVs]
-
-]
-
----
-
-# .center[**Bipartisan goal**: The US needs to counter China's lead in clean energy tech]
-
-<br>
-
---
-
-## **Keep Chinese clean tech out of US market**: Steep tariffs on imported Chinese EVs, batteries
-
---
-
-## **Keep Chinese firms out of US clean tech supply chains**: IRA restrictions on EV subsidy elligiblity, unclear guidance on Foreign Entities of Concern (FEOC) rules
-
----
-
-# .center[Countering China & Investing in Manufacturing]
-
-<br>
-
-## **IRA Strategy**: Investing in *manufacturing* will lead to enduring support for clean tech through local jobs & economic benefits
-
---
-
-## To what extent are counter-China policies helping or harming the clean tech manufacturing goal?
-
----
-
-## Chinese FDI into U.S.
-
-### **Gotion batteries**: Multi-billion dollar investments in Illinois and Michigan
-
-### Challenge: Uncertainty around Foreign Entities of Concern (FEOC) status
-
---
-
-<br>
-
-## Technology Licensing Agreements
-
-### **Ford-CATL**: Licensing battery technology in a Michigan plant
-
-### Challenge: CATL was recently added to DOD's list of “Chinese military companies”
-
----
-
-class: middle, center, inverse
-
-# The biggest competitor<br>to an American EV<br>is not a Chinese EV...<br><br>...it's a gas car

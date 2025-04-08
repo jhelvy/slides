@@ -1,6 +1,7 @@
 library(tidyverse)
 library(cowplot)
 library(oica)
+library(ggrepel)
 
 options(dplyr.width = Inf)
 
@@ -346,3 +347,101 @@ ggsave(
     here::here('images', 'production-share.png'),
     width = 8, height = 6
 )
+
+# Slope plot of EV affordability ----
+
+# Create the data frame for the "All segments" panel
+data <- data.frame(
+    country = rep(c("China", "France", "Germany", "United Kingdom", "United States"), each = 2),
+    year = rep(c(2018, 2022), 5),
+    premium = c(
+        # China values for 2018, 2022
+        16, -15,
+        # France values for 2018, 2022
+        34, 16,
+        # Germany values for 2018, 2022
+        7, 15,
+        # United Kingdom values for 2018, 2022
+        71, 44,
+        # United States values for 2018, 2022
+        80, 59
+    )
+)
+
+# Create labels for left and right sides
+data_2018 <- data %>% filter(year == 2018) %>%
+    mutate(label_left = paste0(country, ": ", premium, "%"))
+
+data_2022 <- data %>% filter(year == 2022) %>%
+    mutate(label_right = paste0(country, ": ", premium, "%"))
+
+# Combine all data
+plot_data <- data %>%
+    left_join(data_2018 %>% select(country, label_left), by = "country") %>%
+    left_join(data_2022 %>% select(country, label_right), by = "country")
+
+# Create the plot
+ggplot(plot_data, aes(x = as.factor(year), y = premium, group = country, color = country)) +
+    geom_hline(yintercept = 0, linetype = "dashed", color = "gray70", size = 0.5) +
+    geom_line(size = 0.8) +
+    geom_point(size = 3) +
+    # Add 2018 labels (left side)
+    geom_text_repel(
+        data = subset(plot_data, year == 2018),
+        aes(label = label_left),
+        hjust = 1, 
+        nudge_x = -0.1,
+        direction = "y", 
+        segment.color = "grey50",
+        segment.size = 0.3,
+        box.padding = 0.5, 
+        family = font_main
+    ) +
+    # Add 2022 labels (right side)
+    geom_text_repel(
+        data = subset(plot_data, year == 2022),
+        aes(label = label_right),
+        hjust = 0, 
+        nudge_x = 0.1,
+        direction = "y", 
+        segment.color = "grey50",
+        segment.size = 0.3,
+        box.padding = 0.5,
+        family = font_main
+    ) +
+    scale_color_manual(values = c(
+        "China" = "#F73753",              # More muted red for China
+        "France" = "gray42",             # Muted blue-teal for France
+        "Germany" = "#8FC977FF",            # Muted teal-green for Germany
+        "United Kingdom" = "#E37D39FF",     # Muted purple for UK
+        "United States" = "#3288BD"       # Deeper blue for USA
+    )) +
+    labs(
+        title = "All segments",
+        x = "",
+        y = "Electric premium (%)", 
+        caption = "IEA. Licence: CC BY 4.0"
+    ) +
+    scale_x_discrete(position = "top") +
+    scale_y_continuous(limits = c(-30, 90), breaks = seq(-25, 75, by = 25)) +
+    theme_minimal(base_family = font_main) +
+    theme(
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "none",
+        plot.title = element_text(hjust = 0.5, face = "bold", margin = margin(b = 5)), # Reduced bottom margin
+        plot.title.position = "plot", # This helps with alignment
+        axis.text.x.top = element_text(margin = margin(b = 0)), # Reduced bottom margin for top x-axis text
+        axis.text.y = element_text(size = 9),
+        plot.caption = element_text(size = 8, color = "gray50", hjust = 1),
+        axis.title.y = element_text(size = 10, margin = margin(r = 10)), 
+        panel.background = element_rect(fill = "white", color = NA),
+        plot.background = element_rect(fill = "white", color = NA),
+        plot.margin = margin(t = 5, r = 10, b = 10, l = 10) # Reduced top margin
+    )
+
+ggsave(
+    here::here('images', 'ev-price-slope.png'),
+    width = 7, height = 6
+)
+
